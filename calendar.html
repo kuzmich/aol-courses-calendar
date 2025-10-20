@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание курсов и мероприятий ИЖ в Иркутске</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+	body {
+	    margin: 0;
+	    font-family: system-ui;
+	    background-color: aliceblue;
+	}
+	.line-clamp {
+	    display: -webkit-box;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: var(--max-lines, 1);
+	    overflow: hidden;
+	}
+        .calendar {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+	    grid-template-rows: 1.5rem;
+            grid-auto-rows: 1fr;
+	    grid-gap: 2px;
+            list-style: none;
+            padding: 0;
+        }
+	.day-of-week {
+	    text-align: center;
+	}
+        .day {
+	    min-height: 6rem;
+	    padding-block-start: 4px;
+	    font-size: 0.85rem;
+	    text-align: right;
+	    background-color: white;
+        }
+        .event {
+            grid-row: 3;
+            grid-column: 5 / 8;
+            align-self: self-start;
+            margin-top: 1.6rem;
+	    padding-inline: 5px;
+	    border-radius: 4px;
+            background-color: cornflowerblue;
+	    color: white;
+	    font-size: 0.85rem;
+        }
+	.calendar > :nth-child(2 of .event) {
+	    margin-block-start: 2.8rem;
+	}
+        .day:nth-of-type(19) {
+            grid-row: 3;
+            grid-column: 5;
+        }
+        .day:nth-of-type(20) {
+            grid-row: 3;
+            grid-column: 6;
+        }
+        .day:nth-of-type(21) {
+            grid-row: 3;
+            grid-column: 7;
+        }
+    </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="day-of-week">пн</div>
+    <div class="day-of-week">вт</div>
+    <div class="day-of-week">ср</div>
+    <div class="day-of-week">чт</div>
+    <div class="day-of-week">пт</div>
+    <div class="day-of-week">сб</div>
+    <div class="day-of-week">вс</div>
+    <div class="day">1</div>
+    <div class="day">2</div>
+    <div class="day">3</div>
+    <div class="day">4</div>
+    <div class="day">5</div>
+    <div class="day">6</div>
+    <div class="day">7</div>
+    <div class="day">8</div>
+    <div class="day">9</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">17</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+    <div class="day">30</div>
+    <div class="day">31</div>
+    <div class="event line-clamp">Счастье Артиш + Кузьминич</div>
+    <div class="event line-clamp">Счастье 2</div>
+  </div>
+</body>
+</html>
