@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание курсов и мероприятий ИЖ в Иркутске</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+  <div class="calendar">
+    <div class="day-of-week">пн</div>
+    <div class="day-of-week">вт</div>
+    <div class="day-of-week">ср</div>
+    <div class="day-of-week">чт</div>
+    <div class="day-of-week">пт</div>
+    <div class="day-of-week">сб</div>
+    <div class="day-of-week">вс</div>
+    {%- for week in month_dates %}
+    {% set week_num = loop.index %}
+    {%- for date in week %}
+    <div class="day week{{ week_num }} weekday{{ loop.index }}{% if date.month != cur_month %} off-month{% endif %}">{{ date.day }}</div>
+    {%- endfor %}
+    {%- endfor %}
+    {%- for event in events %}
+    <div class="event line-clamp {{ event.type }} event-num-{{ event.pos.index }}"
+	 style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}">
+      {{ event.name }}
+    </div>
+    {%- endfor %}
+  </div>
+</body>
+</html>
