@@ -117,10 +117,21 @@ class AdminCourses:
         'счастье': 'happiness',
         'блессинг': 'blessing',
         'yes!': 'yes',
+        'yes+': 'yes',
         'art excel': 'art_excel',
+        'процесс интуиции': 'intuition',
         'процесс интуиции 5-8 лет': 'intuition',
+        'процесс интуиции 8-18 лет': 'intuition',
         'поддерживающее занятие online': 'practices',
         'глубокий сон и снятие тревожности': 'deep_sleep',
+        'искусство тишины': 'art_of_silence',
+        'искусство медитации': 'art_of_meditation',
+        'шри шри йога': 'ssy',
+        'шри шри йога 2': 'ssy',
+        'здоровое питание': 'cooking',
+        'победи зависимость': 'give_up_smoking',
+        # 'процесс вечности': 'eternity',
+        # 'саньям': 'sanyam',
     }
 
     _sess = None
@@ -193,6 +204,20 @@ class AdminCourses:
         else:
             raise ValueError(f"Неизвестный формат строки: '{date_str}'")
 
+    def _parse_teachers(self, teachers_str):
+        """Возвращает список фамилий учителей
+
+        >>> adm._parse_teachers('Анжелика Артиш, Алексей Кузьминич')
+        ['Артиш', 'Кузьминич']
+        """
+        teachers = []
+        teachers_str = teachers_str.strip()
+        if not teachers_str:
+            return teachers
+        for teacher in teachers_str.split(','):
+            teachers.append(teacher.strip().split()[-1])
+        return teachers
+
     @property
     def _session(self):
         if not self._sess:
@@ -200,10 +225,14 @@ class AdminCourses:
         return self._sess
 
     def _get_courses(self, year, month):
-        # [{'date': '31 Октября-2 Ноября', 'place': 'Театральная, 17', 'name': 'Блессинг'},
-        #  {'date': '17-19 Октября', 'place': 'Театральная, 17', 'name': 'Счастье'},
-        #  {'date': '25–28 Октября', 'place': 'Театральная, 17', 'name': 'YES!'}
-        #  {'date': '19 Октября', 'place': 'Онлайн, время МСК+5', 'Поддерживающее занятие online'},
+        # [{'date': '31 Октября-2 Ноября', 'place': 'Театральная, 17', 'name': 'Блессинг',
+        #   'teachers': 'Ольга Шумакова', 'num_payments': 9},
+        #  {'date': '17-19 Октября', 'place': 'Театральная, 17', 'name': 'Счастье',
+        #   'teachers': 'Анжелика Артиш, Алексей Кузьминич', 'num_payments': 10},
+        #  {'date': '25–28 Октября', 'place': 'Театральная, 17', 'name': 'YES!',
+        #   'teachers': 'Галина Дианова, Татьяна Шпикалова', 'num_payments': 9}
+        #  {'date': '19 Октября', 'place': 'Онлайн, время МСК+5', 'Поддерживающее занятие online',
+        #   'num_payments': 9},
         return find_courses(self._session, month=date(year, month, 1))
 
     def _courses2events(self, courses, year):
@@ -220,6 +249,7 @@ class AdminCourses:
                     'name': c['name'],
                     'type': self._get_course_type(c['name']),
                     'dates': self._parse_dates(c['date'], year),
+                    'teachers': self._parse_teachers(c.get('teachers', ''))
                 }
 
         def make_cal_blocks(events):
@@ -241,6 +271,7 @@ class AdminCourses:
                         'name': e['name'],
                         'type': e['type'],
                         'dates': e['dates'],
+                        'teachers': e['teachers'],
                         'pos': block
                     }
 
@@ -274,7 +305,8 @@ class AdminCourses:
 
             return events
 
-        parsed = (e for e in parse(courses))
+        actual = (c for c in courses if c['status'] != "Не опубликован")
+        parsed = (e for e in parse(actual))
         blocks = (e for e in make_cal_blocks(parsed))
         blocks = sorted(blocks, key=lambda e: (e['pos']['week'], e['pos']['start']))
         indexed = []
@@ -285,7 +317,7 @@ class AdminCourses:
 
     def _save(self, year, month, courses):
         with (self.data_dir / f'{year}_{month}.json').open('wt') as f:
-            json.dump(courses, f, indent=2)
+            json.dump(courses, f, indent=2, ensure_ascii=False)
 
     def _load(self, year, month):
         with (self.data_dir / f'{year}_{month}.json').open('rt') as f:
@@ -331,9 +363,6 @@ if __name__ == "__main__":
 
     output = render_calendar(
         {'calendar_data': calendar_data},
-        # {'month_dates': month_dates,
-        #  'events': events,
-        #  'cur_month': 10},
         template_file
     )
     write_to_file(output, output_file)

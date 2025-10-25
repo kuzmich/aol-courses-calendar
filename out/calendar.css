@@ -145,6 +145,15 @@ body {
 .intuition {
     background-color: #3f34f7;
 }
+.cooking {
+    background-color: #f17645;
+}
+.give_up_smoking {
+    background-color: #4692ff;
+}
+.unknown {
+    /* background-color: black; */
+}
 
 h2 {
     padding-inline: 1ch;
