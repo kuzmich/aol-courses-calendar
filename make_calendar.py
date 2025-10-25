@@ -226,13 +226,13 @@ class AdminCourses:
 
     def _get_courses(self, year, month):
         # [{'date': '31 Октября-2 Ноября', 'place': 'Театральная, 17', 'name': 'Блессинг',
-        #   'teachers': 'Ольга Шумакова', 'num_payments': 9},
+        #   'teachers': 'Ольга Шумакова', 'num_payments': 9, 'status': 'Стоит в расписании'},
         #  {'date': '17-19 Октября', 'place': 'Театральная, 17', 'name': 'Счастье',
-        #   'teachers': 'Анжелика Артиш, Алексей Кузьминич', 'num_payments': 10},
+        #   'teachers': 'Анжелика Артиш, Алексей Кузьминич', 'num_payments': 10, 'status': 'Завершён'},
         #  {'date': '25–28 Октября', 'place': 'Театральная, 17', 'name': 'YES!',
-        #   'teachers': 'Галина Дианова, Татьяна Шпикалова', 'num_payments': 9}
+        #   'teachers': 'Галина Дианова, Татьяна Шпикалова', 'num_payments': 9, 'status': 'Идет'}
         #  {'date': '19 Октября', 'place': 'Онлайн, время МСК+5', 'Поддерживающее занятие online',
-        #   'num_payments': 9},
+        #   'num_payments': 9, 'status': 'Завершён'},
         return find_courses(self._session, month=date(year, month, 1))
 
     def _courses2events(self, courses, year):
@@ -286,7 +286,6 @@ class AdminCourses:
                 # пробуем найти уровень, где текущее событие помещается
                 for i, l in enumerate(levels, 1):
                     if l[0] < start:
-                        # l[0] = end
                         levels[i-1] = (end, i)
                         event['pos']['index'] = i
                         break
@@ -295,17 +294,9 @@ class AdminCourses:
                     event['pos']['index'] = next_level
                     next_level += 1
 
-                # if levels and levels[0][0] < start:  # можно переиспользовать уровень
-                #     last_end, level = heapq.heappop(levels)
-                # else:
-                #     level = next_level
-                #     next_level += 1
-                # event['pos']['index'] = level
-                # heapq.heappush(levels, (end, level))
-
             return events
 
-        actual = (c for c in courses if c['status'] != "Не опубликован")
+        actual = (c for c in courses if not (c['status'] == "Не опубликован" and c['num_payments'] == 0))
         parsed = (e for e in parse(actual))
         blocks = (e for e in make_cal_blocks(parsed))
         blocks = sorted(blocks, key=lambda e: (e['pos']['week'], e['pos']['start']))
