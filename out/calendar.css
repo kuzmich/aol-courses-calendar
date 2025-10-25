@@ -158,4 +158,9 @@ body {
 h2 {
     padding-inline: 1ch;
     text-align: center;
+    margin-block-start: 3.5rem;
+    color: hsl(0 0% 30%);
+}
+h2:first-of-type {
+    margin-block-start: 2rem;
 }
