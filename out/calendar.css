@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --off-month-c: hsl(0 0% 60%);
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: aliceblue;
+}
+/* ограничим текст события в 1 строку */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines, 1);
+    overflow: hidden;
+}
+/* сетка календаря */
+.calendar {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1.5rem;
+    grid-auto-rows: 1fr;
+    grid-gap: 2px;
+    padding: 0;
+    list-style: none;
+}
+/* день недели: пн, вт, ср... */
+.day-of-week {
+    text-align: left;
+    padding-inline: 4px;
+}
+/* квадратик календаря */
+.day {
+    min-height: 6rem;
+    padding: 4px 4px 0 4px;
+    font-size: 0.85rem;
+    text-align: left;
+    background-color: white;
+}
+/* дни не из текущего месяца */
+.off-month {
+    color: var(--off-month-c);
+}
+/* дни календаря надо поместить на место, чтобы их не вытеснили полоски событий */
+.week1 {
+    grid-row: 2;
+}
+.week2 {
+    grid-row: 3;
+}
+.week3 {
+    grid-row: 4;
+}
+.week4 {
+    grid-row: 5;
+}
+.week5 {
+    grid-row: 6;
+}
+.week6 {
+    grid-row: 7;
+}
+.weekday1 {
+    grid-column: 1;
+}
+.weekday2 {
+    grid-column: 2;
+}
+.weekday3 {
+    grid-column: 3;
+}
+.weekday4 {
+    grid-column: 4;
+}
+.weekday5 {
+    grid-column: 5;
+}
+.weekday6 {
+    grid-column: 6;
+}
+.weekday7 {
+    grid-column: 7;
+}
+/* полоска события */
+.event {
+    align-self: self-start;
+    padding-inline: 5px;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 0.85rem;
+    /* fix for button element */
+    text-align: left;
+    border: none;
+}
+/* распределим полоски событий по вертикали, чтобы они не сливались в одну линию */
+.event-num-1 {
+    margin-block-start: 1.6rem;
+}
+.event-num-2 {
+    margin-block-start: 2.8rem;
+}
+.event-num-3 {
+    margin-block-start: 4.0rem;
+}
+.event-num-4 {
+    margin-block-start: 5.2rem;
+}
+.event-num-5 {
+    margin-block-start: 6.4rem;
+}
+.event-num-6 {
+    margin-block-start: 7.6rem;
+}
+
+/* типы событий */
+.happiness {
+    background-color: #ff8400;
+}
+.art_of_silence,
+.blessing {
+    background-color: #35b3e1;
+}
+.art_of_meditation {
+    background-color: #7b54bf;
+}
+.ssy,
+.deep_sleep {
+    background-color: #ff7b7c;
+}
+.yes {
+    background-color: #4bbf05;
+}
+.art_excel {
+    background-color: #ffc001;
+}
+.intuition {
+    background-color: #3f34f7;
+}
+
+h2 {
+    padding-inline: 1ch;
+    text-align: right;
+}
