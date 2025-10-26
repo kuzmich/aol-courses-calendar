@@ -15,11 +15,17 @@
     {%- endfor %}
     {%- for event in data.events %}
     {# <div class="event line-clamp {{ event.type }} event-num-{{ event.pos.index }}"
-	 style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}">
+	    style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}">
       {{ event.name }}
     </div> #}
     <button class="event line-clamp {{ event.type }} event-num-{{ event.pos.index }}"
-	 style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}">
+	    style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}"
+	    data-name="{{ event.name }}"
+	    data-dates="{{ event.dates_str }}"
+	    data-place="{{ event.place }}"
+	    data-teachers="{{ event.teachers_str }}"
+	    data-people="{{ event.num_payments }}"
+	    >
       {{ event.name }}{% if event.teachers %} ({{ event.teachers|join(' + ') }}){% endif %}
     </button>
     {%- endfor %}

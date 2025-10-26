@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Расписание курсов и мероприятий ИЖ в Иркутске</title>
     <link rel="stylesheet" href="calendar.css?ver=2025-10-25T19:16:00+08:00">
+    <script src="calendar.js?ver=2025-10-25T21:25:00+08:00" defer></script>
 </head>
 <body>
+  <dialog class="event-details">
+    <header>
+      <h3></h3>
+      <button class="close">X</button>
+    </header>
+    <dl>
+      <div>
+	<dt>Даты:</dt>
+	<dd data-name="dates"></dd>
+      </div>
+      <div>
+	<dt>Место:</dt>
+	<dd data-name="place"></dd>
+      </div>
+      <div>
+	<dt>Учителя:</dt>
+	<dd data-name="teachers"></dd>
+      </div>
+      <div>
+	<dt>Участников:</dt>
+	<dd data-name="people"></dd>
+      </div>
+    </dl>
+  </dialog>
   
       <h2>Январь 2025</h2>
   <div class="calendar" data-month="1" data-year="2025">
@@ -59,82 +84,178 @@
     <div class="day week5 weekday7 off-month">2</div>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 2; grid-column: 5 / 8">
+	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-name="YES!"
+	    data-dates="3–6 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова"
+	    data-people="14"
+	    >
       YES! (Дианова)
     </button>
     
     <button class="event line-clamp art_excel event-num-2"
-	 style="grid-row: 2; grid-column: 5 / 8">
+	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-name="ART Excel"
+	    data-dates="3–6 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Шпикалова"
+	    data-people="18"
+	    >
       ART Excel (Шпикалова)
     </button>
     
     <button class="event line-clamp happiness event-num-3"
-	 style="grid-row: 2; grid-column: 5 / 8">
+	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="3–5 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Андрей Маслов, Ольга Демиденко"
+	    data-people="40"
+	    >
       Счастье (Маслов + Демиденко)
     </button>
     
     <button class="event line-clamp happiness event-num-4"
-	 style="grid-row: 2; grid-column: 6 / 8">
+	    style="grid-row: 2; grid-column: 6 / 8"
+	    data-name="Счастье"
+	    data-dates="4–7 Января"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Людмила Леонович, Русина Портнягина, Елена Костицина"
+	    data-people="11"
+	    >
       Счастье (Леонович + Портнягина + Костицина)
     </button>
     
     <button class="event line-clamp happiness event-num-5"
-	 style="grid-row: 2; grid-column: 6 / 8">
+	    style="grid-row: 2; grid-column: 6 / 8"
+	    data-name="Счастье"
+	    data-dates="4–6 Января"
+	    data-place="Луговое (ул. Изумрудная, 8)"
+	    data-teachers="Валентина Есина, Игорь Ширкин"
+	    data-people="9"
+	    >
       Счастье (Есина + Ширкин)
     </button>
     
     <button class="event line-clamp practices event-num-6"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="5 Января"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="4"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 3; grid-column: 1 / 3">
+	    style="grid-row: 3; grid-column: 1 / 3"
+	    data-name="Счастье"
+	    data-dates="4–7 Января"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Людмила Леонович, Русина Портнягина, Елена Костицина"
+	    data-people="11"
+	    >
       Счастье (Леонович + Портнягина + Костицина)
     </button>
     
     <button class="event line-clamp happiness event-num-2"
-	 style="grid-row: 3; grid-column: 1 / 2">
+	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-name="Счастье"
+	    data-dates="4–6 Января"
+	    data-place="Луговое (ул. Изумрудная, 8)"
+	    data-teachers="Валентина Есина, Игорь Ширкин"
+	    data-people="9"
+	    >
       Счастье (Есина + Ширкин)
     </button>
     
     <button class="event line-clamp yes event-num-3"
-	 style="grid-row: 3; grid-column: 1 / 2">
+	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-name="YES!"
+	    data-dates="3–6 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова"
+	    data-people="14"
+	    >
       YES! (Дианова)
     </button>
     
     <button class="event line-clamp art_excel event-num-4"
-	 style="grid-row: 3; grid-column: 1 / 2">
+	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-name="ART Excel"
+	    data-dates="3–6 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Шпикалова"
+	    data-people="18"
+	    >
       ART Excel (Шпикалова)
     </button>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 3; grid-column: 3 / 8">
+	    style="grid-row: 3; grid-column: 3 / 8"
+	    data-name="YES+"
+	    data-dates="8–12 Января"
+	    data-place="Театральная, 17"
+	    data-teachers="Екатерина Григолайт, Екатерина Рогозина"
+	    data-people="9"
+	    >
       YES+ (Григолайт + Рогозина)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="12 Января"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp unknown event-num-1"
-	 style="grid-row: 4; grid-column: 3 / 8">
+	    style="grid-row: 4; grid-column: 3 / 8"
+	    data-name="Саньям"
+	    data-dates="15–20 Января"
+	    data-place="парк-отель «Звездный»"
+	    data-teachers="Кашикар Динеш"
+	    data-people="83"
+	    >
       Саньям (Динеш)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="19 Января"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="4"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp unknown event-num-1"
-	 style="grid-row: 5; grid-column: 1 / 2">
+	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-name="Саньям"
+	    data-dates="15–20 Января"
+	    data-place="парк-отель «Звездный»"
+	    data-teachers="Кашикар Динеш"
+	    data-people="83"
+	    >
       Саньям (Динеш)
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="26 Января"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
   </div>
@@ -190,47 +311,101 @@
     <div class="day week5 weekday7 off-month">2</div>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="2 Февраля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="9"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="9 Февраля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="ART Excel"
+	    data-dates="14–17 Февраля"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Куликова"
+	    data-people="8"
+	    >
       ART Excel (Куликова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="16 Февраля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 5; grid-column: 1 / 2">
+	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-name="ART Excel"
+	    data-dates="14–17 Февраля"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Куликова"
+	    data-people="8"
+	    >
       ART Excel (Куликова)
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 5; grid-column: 4 / 8">
+	    style="grid-row: 5; grid-column: 4 / 8"
+	    data-name="Счастье"
+	    data-dates="20–25 Февраля"
+	    data-place="Театральная, 17"
+	    data-teachers="Лариса Глебова, Олег Федоров"
+	    data-people="10"
+	    >
       Счастье (Глебова + Федоров)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="23 Февраля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="4"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 6; grid-column: 1 / 3">
+	    style="grid-row: 6; grid-column: 1 / 3"
+	    data-name="Счастье"
+	    data-dates="20–25 Февраля"
+	    data-place="Театральная, 17"
+	    data-teachers="Лариса Глебова, Олег Федоров"
+	    data-people="10"
+	    >
       Счастье (Глебова + Федоров)
     </button>
     
     <button class="event line-clamp art_of_meditation event-num-1"
-	 style="grid-row: 6; grid-column: 5 / 8">
+	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-name="Искусство медитации"
+	    data-dates="28 Февраля–2 Марта"
+	    data-place="Театральная, 17"
+	    data-teachers="Вадим Копанев"
+	    data-people="22"
+	    >
       Искусство медитации (Копанев)
     </button>
   </div>
@@ -294,47 +469,101 @@
     <div class="day week6 weekday7 off-month">6</div>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="2 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="9 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="9 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="0"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="14–16 Марта"
+	    data-place="Театральная, 17"
+	    data-teachers="Анна Ружьева, Елена Девятайкина"
+	    data-people="9"
+	    >
       Счастье (Ружьева + Девятайкина)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="16 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="4"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="23 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 6; grid-column: 4 / 8">
+	    style="grid-row: 6; grid-column: 4 / 8"
+	    data-name="YES!"
+	    data-dates="27–30 Марта"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова, Тамара Готовская"
+	    data-people="9"
+	    >
       YES! (Дианова + Готовская)
     </button>
     
     <button class="event line-clamp art_excel event-num-2"
-	 style="grid-row: 6; grid-column: 4 / 8">
+	    style="grid-row: 6; grid-column: 4 / 8"
+	    data-name="ART Excel"
+	    data-dates="27–30 Марта"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Шпикалова"
+	    data-people="12"
+	    >
       ART Excel (Шпикалова)
     </button>
     
     <button class="event line-clamp practices event-num-3"
-	 style="grid-row: 6; grid-column: 7 / 8">
+	    style="grid-row: 6; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="30 Марта"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
   </div>
@@ -390,47 +619,101 @@
     <div class="day week5 weekday7 off-month">4</div>
     
     <button class="event line-clamp intuition event-num-1"
-	 style="grid-row: 2; grid-column: 6 / 8">
+	    style="grid-row: 2; grid-column: 6 / 8"
+	    data-name="Процесс интуиции"
+	    data-dates="5–6 Апреля"
+	    data-place="Театральная, 17"
+	    data-teachers="Оксана Павлова"
+	    data-people="26"
+	    >
       Процесс интуиции (Павлова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="6 Апреля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="4"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp cooking event-num-1"
-	 style="grid-row: 3; grid-column: 5 / 8">
+	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-name="Здоровое питание"
+	    data-dates="11–13 Апреля"
+	    data-place="Театральная, 17"
+	    data-teachers="Евгения Пашевина, Коробко Анастасия"
+	    data-people="8"
+	    >
       Здоровое питание (Пашевина + Анастасия)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="13 Апреля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="18–20 Апреля"
+	    data-place="Театральная, 17"
+	    data-teachers="Зинаида Крылова, Галина Цыкунова"
+	    data-people="16"
+	    >
       Счастье (Крылова + Цыкунова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="20 Апреля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp deep_sleep event-num-1"
-	 style="grid-row: 5; grid-column: 5 / 8">
+	    style="grid-row: 5; grid-column: 5 / 8"
+	    data-name="Глубокий сон и снятие тревожности"
+	    data-dates="25–27 Апреля"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Шумакова"
+	    data-people="23"
+	    >
       Глубокий сон и снятие тревожности (Шумакова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="27 Апреля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_of_silence event-num-1"
-	 style="grid-row: 6; grid-column: 3 / 8">
+	    style="grid-row: 6; grid-column: 3 / 8"
+	    data-name="Искусство тишины"
+	    data-dates="30 Апреля–4 Мая"
+	    data-place="Листвянка, гостиница Larus (ул. Октябрьская, 8д)"
+	    data-teachers="Вадим Копанев"
+	    data-people="38"
+	    >
       Искусство тишины (Копанев)
     </button>
   </div>
@@ -486,42 +769,90 @@
     <div class="day week5 weekday7 off-month">1</div>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 2; grid-column: 5 / 8">
+	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="2–4 Мая"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Русина Портнягина, Елена Костицина"
+	    data-people="7"
+	    >
       Счастье (Портнягина + Костицина)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="4 Мая"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="11 Мая"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="10"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp give_up_smoking event-num-1"
-	 style="grid-row: 4; grid-column: 4 / 8">
+	    style="grid-row: 4; grid-column: 4 / 8"
+	    data-name="Победи зависимость"
+	    data-dates="15–19 Мая"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Демиденко, Павел Глуханько"
+	    data-people="1"
+	    >
       Победи зависимость (Демиденко + Глуханько)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="18 Мая"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="2"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp give_up_smoking event-num-1"
-	 style="grid-row: 5; grid-column: 1 / 2">
+	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-name="Победи зависимость"
+	    data-dates="15–19 Мая"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Демиденко, Павел Глуханько"
+	    data-people="1"
+	    >
       Победи зависимость (Демиденко + Глуханько)
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="25 Мая"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 6; grid-column: 5 / 8">
+	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-name="YES!"
+	    data-dates="30 Мая–2 Июня"
+	    data-place="Театральная, 17"
+	    data-teachers="Татьяна Куликова"
+	    data-people="6"
+	    >
       YES! (Куликова)
     </button>
   </div>
@@ -585,52 +916,112 @@
     <div class="day week6 weekday7 off-month">6</div>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="1 Июня"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="1"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 3; grid-column: 5 / 8">
+	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-name="ART Excel"
+	    data-dates="6–9 Июня"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Яков Губерман, Татьяна Куликова"
+	    data-people="13"
+	    >
       ART Excel (Губерман + Куликова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="8 Июня"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 4; grid-column: 1 / 2">
+	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-name="ART Excel"
+	    data-dates="6–9 Июня"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Яков Губерман, Татьяна Куликова"
+	    data-people="13"
+	    >
       ART Excel (Губерман + Куликова)
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 4; grid-column: 4 / 8">
+	    style="grid-row: 4; grid-column: 4 / 8"
+	    data-name="ART Excel"
+	    data-dates="12–15 Июня"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова"
+	    data-people="13"
+	    >
       ART Excel (Дианова)
     </button>
     
     <button class="event line-clamp happiness event-num-2"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="13–15 Июня"
+	    data-place="Театральная, 17"
+	    data-teachers="Олег Федоров"
+	    data-people="9"
+	    >
       Счастье (Федоров)
     </button>
     
     <button class="event line-clamp practices event-num-3"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="15 Июня"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp ssy event-num-1"
-	 style="grid-row: 5; grid-column: 3 / 8">
+	    style="grid-row: 5; grid-column: 3 / 8"
+	    data-name="Шри Шри йога 2"
+	    data-dates="18–22 Июня"
+	    data-place="д. Куркут, база отдыха «Байкал-вега»"
+	    data-teachers="Анжелика Артиш"
+	    data-people="1"
+	    >
       Шри Шри йога 2 (Артиш)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="22 Июня"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="3"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 6; grid-column: 7 / 8">
+	    style="grid-row: 6; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="29 Июня"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
   </div>
@@ -686,52 +1077,112 @@
     <div class="day week5 weekday7 off-month">3</div>
     
     <button class="event line-clamp deep_sleep event-num-1"
-	 style="grid-row: 2; grid-column: 5 / 8">
+	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-name="Глубокий сон и снятие тревожности"
+	    data-dates="4–6 Июля"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Шумакова"
+	    data-people="19"
+	    >
       Глубокий сон и снятие тревожности (Шумакова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="6 Июля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="13 Июля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="3"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 4; grid-column: 1 / 5">
+	    style="grid-row: 4; grid-column: 1 / 5"
+	    data-name="Счастье"
+	    data-dates="14–17 Июля"
+	    data-place="Большие Коты"
+	    data-teachers="Зинаида Крылова, Светлана Гурулева"
+	    data-people="9"
+	    >
       Счастье (Крылова + Гурулева)
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="18–20 Июля"
+	    data-place="Листвянка, гостиница Larus (ул. Октябрьская, 8д)"
+	    data-teachers="Вадим Копанев"
+	    data-people="25"
+	    >
       Счастье (Копанев)
     </button>
     
     <button class="event line-clamp art_of_meditation event-num-2"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Искусство медитации"
+	    data-dates="18–20 Июля"
+	    data-place="Листвянка, гостиница Larus (ул. Октябрьская, 8д)"
+	    data-teachers="Вадим Копанев"
+	    data-people="25"
+	    >
       Искусство медитации (Копанев)
     </button>
     
     <button class="event line-clamp practices event-num-3"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="20 Июля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="0"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 5; grid-column: 4 / 8">
+	    style="grid-row: 5; grid-column: 4 / 8"
+	    data-name="Счастье"
+	    data-dates="24–29 Июля"
+	    data-place="Театральная, 17"
+	    data-teachers="Лариса Глебова, Елена Федорова"
+	    data-people="0"
+	    >
       Счастье (Глебова + Федорова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="27 Июля"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 6; grid-column: 1 / 3">
+	    style="grid-row: 6; grid-column: 1 / 3"
+	    data-name="Счастье"
+	    data-dates="24–29 Июля"
+	    data-place="Театральная, 17"
+	    data-teachers="Лариса Глебова, Елена Федорова"
+	    data-people="0"
+	    >
       Счастье (Глебова + Федорова)
     </button>
   </div>
@@ -787,57 +1238,123 @@
     <div class="day week5 weekday7">31</div>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="3 Августа"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="10 Августа"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_of_silence event-num-1"
-	 style="grid-row: 4; grid-column: 1 / 8">
+	    style="grid-row: 4; grid-column: 1 / 8"
+	    data-name="Искусство тишины"
+	    data-dates="11–17 Августа"
+	    data-place="д. Куркут, база отдыха «Байкал-вега»"
+	    data-teachers="Ольга Шумакова"
+	    data-people="36"
+	    >
       Искусство тишины (Шумакова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="17 Августа"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 5; grid-column: 4 / 8">
+	    style="grid-row: 5; grid-column: 4 / 8"
+	    data-name="YES!"
+	    data-dates="21–24 Августа"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова"
+	    data-people="9"
+	    >
       YES! (Дианова)
     </button>
     
     <button class="event line-clamp art_excel event-num-2"
-	 style="grid-row: 5; grid-column: 6 / 8">
+	    style="grid-row: 5; grid-column: 6 / 8"
+	    data-name="ART Excel"
+	    data-dates="23–28 Августа"
+	    data-place="Ольхон, ретритный центр «Чаша Чингисхана»"
+	    data-teachers="Наталья Готовцева"
+	    data-people="13"
+	    >
       ART Excel (Готовцева)
     </button>
     
     <button class="event line-clamp happiness event-num-3"
-	 style="grid-row: 5; grid-column: 6 / 8">
+	    style="grid-row: 5; grid-column: 6 / 8"
+	    data-name="Счастье"
+	    data-dates="23–28 Августа"
+	    data-place="Ольхон, ретритный центр «Чаша Чингисхана»"
+	    data-teachers="Алексей Кузьминич, Екатерина Рогозина"
+	    data-people="9"
+	    >
       Счастье (Кузьминич + Рогозина)
     </button>
     
     <button class="event line-clamp practices event-num-4"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="24 Августа"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_excel event-num-1"
-	 style="grid-row: 6; grid-column: 1 / 5">
+	    style="grid-row: 6; grid-column: 1 / 5"
+	    data-name="ART Excel"
+	    data-dates="23–28 Августа"
+	    data-place="Ольхон, ретритный центр «Чаша Чингисхана»"
+	    data-teachers="Наталья Готовцева"
+	    data-people="13"
+	    >
       ART Excel (Готовцева)
     </button>
     
     <button class="event line-clamp happiness event-num-2"
-	 style="grid-row: 6; grid-column: 1 / 5">
+	    style="grid-row: 6; grid-column: 1 / 5"
+	    data-name="Счастье"
+	    data-dates="23–28 Августа"
+	    data-place="Ольхон, ретритный центр «Чаша Чингисхана»"
+	    data-teachers="Алексей Кузьминич, Екатерина Рогозина"
+	    data-people="9"
+	    >
       Счастье (Кузьминич + Рогозина)
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 6; grid-column: 7 / 8">
+	    style="grid-row: 6; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="31 Августа"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="7"
+	    >
       Поддерживающее занятие online
     </button>
   </div>
@@ -893,42 +1410,90 @@
     <div class="day week5 weekday7 off-month">5</div>
     
     <button class="event line-clamp unknown event-num-1"
-	 style="grid-row: 2; grid-column: 2 / 3">
+	    style="grid-row: 2; grid-column: 2 / 3"
+	    data-name="Процесс вечности"
+	    data-dates="2 Сентября"
+	    data-place="Театральная, 17"
+	    data-teachers="Русина Портнягина"
+	    data-people="1"
+	    >
       Процесс вечности (Портнягина)
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="7 Сентября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 3; grid-column: 5 / 8">
+	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="12–14 Сентября"
+	    data-place="Театральная, 17"
+	    data-teachers="Олег Федоров, Елена Федорова"
+	    data-people="17"
+	    >
       Счастье (Федоров + Федорова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="14 Сентября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="2"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="21 Сентября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="8"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp art_of_silence event-num-1"
-	 style="grid-row: 5; grid-column: 3 / 8">
+	    style="grid-row: 5; grid-column: 3 / 8"
+	    data-name="Искусство тишины"
+	    data-dates="24–28 Сентября"
+	    data-place="Листвянка, гостиница Larus (ул. Октябрьская, 8д)"
+	    data-teachers="Екатерина Синигур"
+	    data-people="20"
+	    >
       Искусство тишины (Синигур)
     </button>
     
     <button class="event line-clamp happiness event-num-2"
-	 style="grid-row: 5; grid-column: 5 / 8">
+	    style="grid-row: 5; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="26–28 Сентября"
+	    data-place="Большая Речка, &#34;Пирамида&#34;"
+	    data-teachers="Зинаида Крылова, Ирина Кузнецова, Елена Костицина"
+	    data-people="0"
+	    >
       Счастье (Крылова + Кузнецова + Костицина)
     </button>
     
     <button class="event line-clamp practices event-num-3"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="28 Сентября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="6"
+	    >
       Поддерживающее занятие online
     </button>
   </div>
@@ -984,72 +1549,156 @@
     <div class="day week5 weekday7 off-month">2</div>
     
     <button class="event line-clamp practices event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="5 Октября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp deep_sleep event-num-1"
-	 style="grid-row: 3; grid-column: 5 / 8">
+	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-name="Глубокий сон и снятие тревожности"
+	    data-dates="10–12 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Шумакова"
+	    data-people="1"
+	    >
       Глубокий сон и снятие тревожности (Шумакова)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 3; grid-column: 7 / 8">
+	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="12 Октября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="5"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 4; grid-column: 5 / 8">
+	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="17–19 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Анжелика Артиш, Алексей Кузьминич"
+	    data-people="10"
+	    >
       Счастье (Артиш + Кузьминич)
     </button>
     
     <button class="event line-clamp practices event-num-2"
-	 style="grid-row: 4; grid-column: 7 / 8">
+	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="19 Октября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="9"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 5; grid-column: 5 / 8">
+	    style="grid-row: 5; grid-column: 5 / 8"
+	    data-name="Счастье"
+	    data-dates="24–26 Октября"
+	    data-place="г. Шелехов, 4-й микрорайон, 30в"
+	    data-teachers="Игорь Ширкин, Елена Костицина"
+	    data-people="10"
+	    >
       Счастье (Ширкин + Костицина)
     </button>
     
     <button class="event line-clamp yes event-num-2"
-	 style="grid-row: 5; grid-column: 6 / 8">
+	    style="grid-row: 5; grid-column: 6 / 8"
+	    data-name="YES!"
+	    data-dates="25–28 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова, Татьяна Шпикалова"
+	    data-people="10"
+	    >
       YES! (Дианова + Шпикалова)
     </button>
     
     <button class="event line-clamp intuition event-num-3"
-	 style="grid-row: 5; grid-column: 6 / 8">
+	    style="grid-row: 5; grid-column: 6 / 8"
+	    data-name="Процесс интуиции 5-8 лет"
+	    data-dates="25 Октября–4 Ноября"
+	    data-place="Театральная, 17"
+	    data-teachers="Елена Иванова"
+	    data-people="5"
+	    >
       Процесс интуиции 5-8 лет (Иванова)
     </button>
     
     <button class="event line-clamp art_excel event-num-4"
-	 style="grid-row: 5; grid-column: 6 / 8">
+	    style="grid-row: 5; grid-column: 6 / 8"
+	    data-name="ART Excel"
+	    data-dates="25–28 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Наталья Верхозина, Татьяна Куликова"
+	    data-people="14"
+	    >
       ART Excel (Верхозина + Куликова)
     </button>
     
     <button class="event line-clamp practices event-num-5"
-	 style="grid-row: 5; grid-column: 7 / 8">
+	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-name="Поддерживающее занятие online"
+	    data-dates="26 Октября"
+	    data-place="Онлайн, время МСК+5"
+	    data-teachers=""
+	    data-people="0"
+	    >
       Поддерживающее занятие online
     </button>
     
     <button class="event line-clamp yes event-num-1"
-	 style="grid-row: 6; grid-column: 1 / 3">
+	    style="grid-row: 6; grid-column: 1 / 3"
+	    data-name="YES!"
+	    data-dates="25–28 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Галина Дианова, Татьяна Шпикалова"
+	    data-people="10"
+	    >
       YES! (Дианова + Шпикалова)
     </button>
     
     <button class="event line-clamp intuition event-num-2"
-	 style="grid-row: 6; grid-column: 1 / 8">
+	    style="grid-row: 6; grid-column: 1 / 8"
+	    data-name="Процесс интуиции 5-8 лет"
+	    data-dates="25 Октября–4 Ноября"
+	    data-place="Театральная, 17"
+	    data-teachers="Елена Иванова"
+	    data-people="5"
+	    >
       Процесс интуиции 5-8 лет (Иванова)
     </button>
     
     <button class="event line-clamp art_excel event-num-3"
-	 style="grid-row: 6; grid-column: 1 / 3">
+	    style="grid-row: 6; grid-column: 1 / 3"
+	    data-name="ART Excel"
+	    data-dates="25–28 Октября"
+	    data-place="Театральная, 17"
+	    data-teachers="Наталья Верхозина, Татьяна Куликова"
+	    data-people="14"
+	    >
       ART Excel (Верхозина + Куликова)
     </button>
     
     <button class="event line-clamp blessing event-num-1"
-	 style="grid-row: 6; grid-column: 5 / 8">
+	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-name="Блессинг"
+	    data-dates="31 Октября–2 Ноября"
+	    data-place="Театральная, 17"
+	    data-teachers="Ольга Шумакова"
+	    data-people="10"
+	    >
       Блессинг (Шумакова)
     </button>
   </div>
@@ -1105,12 +1754,24 @@
     <div class="day week5 weekday7">30</div>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 2; grid-column: 7 / 8">
+	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-name="Счастье"
+	    data-dates="2–4 Ноября"
+	    data-place="Театральная, 17"
+	    data-teachers="Людмила Леонович, Галина Цыкунова"
+	    data-people="5"
+	    >
       Счастье (Леонович + Цыкунова)
     </button>
     
     <button class="event line-clamp happiness event-num-1"
-	 style="grid-row: 3; grid-column: 1 / 3">
+	    style="grid-row: 3; grid-column: 1 / 3"
+	    data-name="Счастье"
+	    data-dates="2–4 Ноября"
+	    data-place="Театральная, 17"
+	    data-teachers="Людмила Леонович, Галина Цыкунова"
+	    data-people="5"
+	    >
       Счастье (Леонович + Цыкунова)
     </button>
   </div>

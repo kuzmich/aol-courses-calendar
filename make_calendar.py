@@ -225,13 +225,17 @@ class AdminCourses:
         return self._sess
 
     def _get_courses(self, year, month):
-        # [{'date': '31 Октября-2 Ноября', 'place': 'Театральная, 17', 'name': 'Блессинг',
-        #   'teachers': 'Ольга Шумакова', 'num_payments': 9, 'status': 'Стоит в расписании'},
-        #  {'date': '17-19 Октября', 'place': 'Театральная, 17', 'name': 'Счастье',
+        # [{'name': 'Блессинг',
+        #   'date': '31 Октября-2 Ноября',
+        #   'place': 'Театральная, 17',
+        #   'teachers': 'Ольга Шумакова',
+        #   'num_payments': 9,
+        #   'status': 'Стоит в расписании'},
+        #  {'name': 'Счастье', 'date': '17-19 Октября', 'place': 'Театральная, 17',
         #   'teachers': 'Анжелика Артиш, Алексей Кузьминич', 'num_payments': 10, 'status': 'Завершён'},
-        #  {'date': '25–28 Октября', 'place': 'Театральная, 17', 'name': 'YES!',
+        #  {'name': 'YES!', 'date': '25–28 Октября', 'place': 'Театральная, 17',
         #   'teachers': 'Галина Дианова, Татьяна Шпикалова', 'num_payments': 9, 'status': 'Идет'}
-        #  {'date': '19 Октября', 'place': 'Онлайн, время МСК+5', 'Поддерживающее занятие online',
+        #  {'name': 'Поддерживающее занятие online', 'date': '19 Октября', 'place': 'Онлайн, время МСК+5',
         #   'num_payments': 9, 'status': 'Завершён'},
         return find_courses(self._session, month=date(year, month, 1))
 
@@ -249,7 +253,11 @@ class AdminCourses:
                     'name': c['name'],
                     'type': self._get_course_type(c['name']),
                     'dates': self._parse_dates(c['date'], year),
-                    'teachers': self._parse_teachers(c.get('teachers', ''))
+                    'teachers': self._parse_teachers(c.get('teachers', '')),
+                    'dates_str': c['date'],
+                    'place': c['place'],
+                    'teachers_str': c.get('teachers', ''),
+                    'num_payments': c['num_payments'],
                 }
 
         def make_cal_blocks(events):
@@ -267,13 +275,7 @@ class AdminCourses:
             for e in events:
                 for i, block in enumerate(get_cal_blocks(e['dates'][0], e['dates'][-1]), 1):
                     block['index'] = i
-                    yield {
-                        'name': e['name'],
-                        'type': e['type'],
-                        'dates': e['dates'],
-                        'teachers': e['teachers'],
-                        'pos': block
-                    }
+                    yield e | {'pos': block}
 
         def assign_levels(events):
             events = sorted(events, key=lambda e: e['pos']['start'])
@@ -304,7 +306,7 @@ class AdminCourses:
         for _, group in groupby(blocks, lambda e: e['pos']['week']):
             indexed.extend(assign_levels(group))
 
-        return list(indexed)
+        return indexed
 
     def _save(self, year, month, courses):
         with (self.data_dir / f'{year}_{month}.json').open('wt') as f:

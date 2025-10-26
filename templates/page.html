@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Расписание курсов и мероприятий ИЖ в Иркутске</title>
     <link rel="stylesheet" href="calendar.css?ver=2025-10-25T19:16:00+08:00">
+    <script src="calendar.js?ver=2025-10-25T21:25:00+08:00" defer></script>
 </head>
 <body>
+  <dialog class="event-details">
+    <header>
+      <h3>Счастье</h3>
+      <button class="close">X</button>
+    </header>
+    <dl>
+      <div>
+	<dt>Даты:</dt>
+	<dd data-name="dates"></dd>
+      </div>
+      <div>
+	<dt>Место:</dt>
+	<dd data-name="place"></dd>
+      </div>
+      <div>
+	<dt>Учителя:</dt>
+	<dd data-name="teachers"></dd>
+      </div>
+      <div>
+	<dt>Участников:</dt>
+	<dd data-name="people"></dd>
+      </div>
+    </dl>
+  </dialog>
   {% for data in calendar_data %}
     {% include 'calendar.html' %}
   {% endfor %}
