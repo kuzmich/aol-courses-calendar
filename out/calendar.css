@@ -5,6 +5,8 @@
 }
 :root {
     --off-month-c: hsl(0 0% 60%);
+    --grey-black-c: hsl(0 0% 30%);
+    --blue-c: #3f34f7;
 }
 html, body {
     height: 100%;
@@ -14,6 +16,13 @@ body {
     font-family: system-ui;
     background-color: aliceblue;
 }
+
+h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--grey-black-c);
+}
+
 /* ограничим текст события в 1 строку */
 .line-clamp {
     display: -webkit-box;
@@ -148,7 +157,7 @@ body {
     background-color: #ffc001;
 }
 .intuition {
-    background-color: #3f34f7;
+    background-color: var(--blue-c);
 }
 .cooking {
     background-color: #f17645;
@@ -164,16 +173,17 @@ h2 {
     margin-block-start: 3.5rem;
     padding-inline: 1ch;
     text-align: center;
-    color: hsl(0 0% 30%);
+    font-size: 1.4rem;
+    color: var(--grey-black-c);
 }
 h2:first-of-type {
-    margin-block-start: 2rem;
+    margin-block-start: 1rem;
 }
 
 /* Окно с информацией о событии/курсе */
 .event-details {
     --padding: 1.1rem;
-    border-radius: 4px;
+    border-radius: 6px;
     border-width: 1px;
     border-color: hsl(208 10% 67%);
     padding: 0;
@@ -187,7 +197,7 @@ h2:first-of-type {
 }
 .event-details h3 {
     margin-block: 0;
-    color: hsl(0 0% 30%);
+    color: var(--grey-black-c);
 }
 .event-details button.close {
     align-self: baseline;
@@ -203,4 +213,27 @@ h2:first-of-type {
 }
 .event-details dd {
     margin: 0;
+}
+
+/* Табы годов */
+
+[role="tablist"] {
+    display: flex;
+    justify-content: center;
+    gap: 1.5ch;
+    margin-block: 2rem 4rem;
+    padding: 0;
+    list-style: none;
+}
+[role="tab"] {
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--grey-black-c);
+}
+[aria-selected="true"] {
+    text-decoration: underline;
+    text-decoration-thickness: 0.25em;
+    text-underline-offset: 0.5em;
+    color: var(--blue-c);
 }
