@@ -115,6 +115,7 @@ class AdminCourses:
 
     course_name_type = {
         'счастье': 'happiness',
+        'счастье (благотворительный)': 'happiness',
         'блессинг': 'blessing',
         'yes!': 'yes',
         'yes+': 'yes',
@@ -124,6 +125,7 @@ class AdminCourses:
         'процесс интуиции 8-18 лет': 'intuition',
         'поддерживающее занятие': 'practices',
         'поддерживающее занятие online': 'practices',
+        '🎸 песенный сатсанг': 'satsang',
         'глубокий сон и снятие тревожности': 'deep_sleep',
         'искусство тишины': 'art_of_silence',
         'искусство тишины online': 'art_of_silence',
@@ -252,16 +254,19 @@ class AdminCourses:
             #     ...
             # ]
             for c in courses:
-                yield {
+                data = {
                     'name': c['name'],
                     'type': self._get_course_type(c['name']),
                     'dates': self._parse_dates(c['date'], year),
-                    'teachers': self._parse_teachers(c.get('teachers', '')),
                     'dates_str': c['date'],
                     'place': c['place'],
+                    'teachers': self._parse_teachers(c.get('teachers', '')),
                     'teachers_str': c.get('teachers', ''),
-                    'num_payments': c['num_payments'],
+                    'num_payments': c.get('num_payments', None),
                 }
+                if 'time' in c:
+                    data['time'] = c['time']
+                yield data
 
         def make_cal_blocks(events):
             # [
@@ -301,9 +306,9 @@ class AdminCourses:
 
             return events
 
-        actual = (c for c in courses if not (c['status'] == "Не опубликован" and c['num_payments'] == 0))
+        actual = (c for c in courses if not (c.get('status') == "Не опубликован" and c.get('num_payments') == 0))
         parsed = (e for e in parse(actual))
-        parsed = (e for e in parsed if e['type'] != 'practices')  # временно уберем поддерживающие занятия
+        # parsed = (e for e in parsed if e['type'] != 'practices')  # временно уберем поддерживающие занятия
         blocks = (e for e in make_cal_blocks(parsed))
         blocks = sorted(blocks, key=lambda e: (e['pos']['week'], e['pos']['start']))
         indexed = []
@@ -312,20 +317,33 @@ class AdminCourses:
 
         return indexed
 
-    def _save(self, year, month, courses):
-        with (self.data_dir / f'{year}_{month}.json').open('wt') as f:
+    def _save(self, filename, courses):
+        with filename.open('wt') as f:
             json.dump(courses, f, indent=2, ensure_ascii=False)
 
-    def _load(self, year, month):
-        with (self.data_dir / f'{year}_{month}.json').open('rt') as f:
+    def _load(self, filename):
+        with filename.open('rt') as f:
             return json.load(f)
 
     def get(self, year, month):
-        try:
-            courses = self._load(year, month)
-        except Exception:
+        admin_file = self.data_dir / f'{year}_{month}.json'
+        manual_file = self.data_dir / 'manual' / f'{year}_{month}.json'
+        courses = []
+
+        if admin_file.exists():
+            try:
+                courses = self._load(admin_file)
+            except Exception as e:
+                logger.warning("Не могу загрузить data-файл : %s", admin_file, e)
+        else:
             courses = self._get_courses(year, month)
-            self._save(year, month, courses)
+            self._save(admin_file, courses)
+
+        if manual_file.exists():
+            try:
+                courses.extend(self._load(manual_file))
+            except Exception as e:
+                logger.warning("Не могу загрузить data-файл : %s", manual_file, e)
 
         events = self._courses2events(courses, year)
         return events

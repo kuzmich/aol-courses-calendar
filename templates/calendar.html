@@ -17,10 +17,10 @@
     <button class="event line-clamp {{ event.type }} event-num-{{ event.pos.index }}"
 	    style="grid-row: {{ event.pos.week + 1}}; grid-column: {{ event.pos.start }} / {{ event.pos.end + 1 }}"
 	    data-name="{{ event.name }}"
-	    data-dates="{{ event.dates_str }}"
+	    data-dates="{{ event.dates_str }}"{% if event.time %} data-time="{{ event.time }}"{% endif %}
 	    data-place="{{ event.place }}"
 	    data-teachers="{{ event.teachers_str }}"
-	    data-people="{{ event.num_payments }}"
+	    data-people="{% if event.num_payments %}{{ event.num_payments }}{% endif %}"
 	    >
       {{ event.name }}{% if event.teachers %} ({{ event.teachers|join(' + ') }}){% endif %}
     </button>
