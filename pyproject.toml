@@ -9,6 +9,7 @@ dependencies = [
     "flask>=3.1.2",
     "jinja2>=3.1.6",
     "pymongo>=4.15.4",
+    "python-dotenv>=1.2.1",
     "wtforms>=3.2.1",
 ]
 

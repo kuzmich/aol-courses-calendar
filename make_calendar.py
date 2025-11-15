@@ -6,6 +6,8 @@ import logging
 from pathlib import Path
 import re
 
+import dotenv
+
 from aa.proxy.admin import log_in, find_courses
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -349,14 +351,19 @@ class AdminCourses:
         return events
 
 
+def read_config():
+    return dotenv.dotenv_values()
+
+
 if __name__ == "__main__":
     logging.basicConfig(level='DEBUG')
 
     template_file = 'page.html'
     output_dir = 'out/'
 
-    email = '***REMOVED***'
-    password = '***REMOVED***'
+    config = read_config()
+    email = config['EMAIL']
+    password = config['PASSWORD']
 
     month_names = ['январь', 'февраль', 'март',
                    'апрель', 'май', 'июнь',
