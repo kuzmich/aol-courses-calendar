@@ -16,11 +16,29 @@ body {
     font-family: system-ui;
     background-color: aliceblue;
 }
-
 h1 {
     font-size: 1.4rem;
     text-align: center;
     color: var(--grey-black-c);
+}
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+}
+
+label {
+    font-weight: bold;
 }
 
 /* ограничим текст события в 1 строку */
@@ -203,6 +221,7 @@ h2:first-of-type {
     color: var(--grey-black-c);
 }
 .event-details button.close {
+    padding: revert;
     align-self: baseline;
 }
 .event-details table {
@@ -224,6 +243,37 @@ h2:first-of-type {
 .event-details td {
     padding: 0.25rem 0 0.25rem 0.75rem;
     vertical-align: baseline;
+}
+
+/* Кнопка и форма добавления события */
+.add-event-btn {
+    position: fixed;
+    right: 3rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: hsl(208 100% 85% / 1); /* darker aliceblue */
+    font-size: 2rem;
+}
+.add-event form {
+    margin: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+.form-group {
+    display: grid;
+    gap: 0.5cap;
+}
+.flex-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2ch;
+}
+
+.form-group select {
+    width: 100%;
 }
 
 /* Табы годов */

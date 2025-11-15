@@ -7,6 +7,8 @@ const timeField = document.querySelector('[data-name="time"]');
 const placeField = document.querySelector('[data-name="place"]');
 const teachersField = document.querySelector('[data-name="teachers"]');
 const peopleField = document.querySelector('[data-name="people"]');
+const addBtn = document.querySelector(".add-event-btn");
+const editBox = document.querySelector('.add-event');
 
 for (let event of events) {
     event.addEventListener("click", (e) => {
@@ -37,6 +39,10 @@ for (let event of events) {
 
 closeBtn.addEventListener("click", () => {
     infoBox.close();
+})
+
+addBtn.addEventListener("click", (e) => {
+    editBox.showModal();
 })
 
 const tabsList = document.querySelector("nav ul");
