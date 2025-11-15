@@ -1,12 +1,14 @@
 import calendar
-from datetime import date
+from datetime import date, datetime
 import enum
 import json
 from pathlib import Path
 
-from flask import Flask, request
+from flask import Flask, request, redirect, url_for, render_template
 from wtforms import Form, SelectField, SelectMultipleField, DateField, TimeField, StringField
 from wtforms.validators import DataRequired, Optional
+
+from make_calendar import get_month_dates, AdminCourses, read_config
 
 
 DATA_DIR = 'data'
@@ -62,7 +64,8 @@ TEACHERS_CHOICES = [
     "Пашевина Евгения",
     "Федорова Елена",
     "Федоров Олег",
-    "Шумакова Ольга"
+    "Шумакова Ольга",
+    "Яскевич Мира"
 ]
 
 
@@ -79,6 +82,21 @@ class Month(enum.Enum):
     октября = 10
     ноября = 11
     декабря = 12
+
+
+class MonthName(enum.Enum):
+    январь = 1
+    февраль = 2
+    март = 3
+    апрель = 4
+    май = 5
+    июнь = 6
+    июль = 7
+    август = 8
+    сентябрь = 9
+    октябрь = 10
+    ноябрь = 11
+    декабрь = 12
 
 
 class EventForm(Form):
@@ -208,6 +226,39 @@ def add_events(events, year, month):
         json.dump(month_events, f, ensure_ascii=False, indent=2)
 
 
+@app.route("/")
+def home_page():
+    return redirect(url_for('calendar_page', year=datetime.now().year))
+
+
+@app.route("/<int:year>.html")
+def calendar_page(year):
+    config = read_config()
+    email = config['EMAIL']
+    password = config['PASSWORD']
+    adm = AdminCourses((email, password))
+
+    years = [2025, 2026]
+    calendar_data = []
+
+    for month in range(1, 12+1):
+        calendar_data.append({
+            'dates': get_month_dates(year, month),
+            'events': adm.get(year, month),
+            'month': month,
+            'month_name': MonthName(month).name.title(),
+            'year': year
+        })
+
+    return render_template(
+        'page_flask.html',
+        calendar_data=calendar_data,
+        years=years,
+        current_year=year,
+        can_edit=True
+    )
+
+
 @app.route("/events/", methods=["POST"])
 def events():
     form = EventForm(request.form)
@@ -230,8 +281,7 @@ def events():
             print(event)
             add_events([event], year, month)
 
-        print(form.data)
+        return redirect(url_for('calendar_page', year=year, _anchor=str(month)))
     else:
-        print(form.errors)
+        return str(form.errors)
 
-    return str(form.data)
