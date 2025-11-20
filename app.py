@@ -9,6 +9,7 @@ from flask import Flask, request, redirect, url_for, render_template
 from pymongo import MongoClient
 from wtforms import Form, SelectField, SelectMultipleField, DateField, TimeField, StringField
 from wtforms.validators import DataRequired, Optional
+from wtforms.widgets import CheckboxInput, ListWidget
 
 from cal_utils import prepare_events, get_month_dates, next_month_first_day, weekdays_in_month
 
@@ -34,10 +35,12 @@ class EventType(enum.StrEnum):
     premium = "Искусство жизни — Премиум"
 
     @classmethod
-    def choices(cls, sort=False):
+    def choices(cls, sort=True, empty_option="Не выбрано"):
         event_types = [(et.name, et.value) for et in cls]
         if sort:
             event_types = sorted(event_types, key=lambda et: et[1])
+        if empty_option:
+            event_types.insert(0, ("", empty_option))
         return event_types
 
 
@@ -106,11 +109,22 @@ class MonthName(enum.Enum):
     декабрь = 12
 
 
+class MultiCheckboxField(SelectMultipleField):
+    """
+    A multiple-select, except displays a list of checkboxes.
+
+    Iterating the field will produce subfields, allowing custom rendering of
+    the enclosed checkbox fields.
+    """
+    widget = ListWidget(prefix_label=False)
+    option_widget = CheckboxInput()
+
+
 class EventForm(Form):
     event_type = SelectField('Мероприятие', [DataRequired()], choices=EventType.choices(), name="type")
     start_date = DateField('Дата начала', [DataRequired()], name="start-date")
     end_date = DateField('Дата окончания', [Optional()], name="end-date")
-    schedule = SelectMultipleField('Расписание', [Optional()], choices=WeekDay.choices(), coerce=int)
+    schedule = MultiCheckboxField('Расписание', [Optional()], choices=WeekDay.choices(), coerce=int)
     start_time = TimeField('Время начала', [Optional()], name="start-time")
     place = StringField('Место', [DataRequired()])
     teachers = SelectMultipleField('Учителя', [Optional()], choices=TEACHERS_CHOICES)
@@ -215,6 +229,7 @@ def home_page():
 def calendar_page(year):
     years = [2025, 2026]
     calendar_data = []
+    form = EventForm()
 
     for month in range(1, 12+1):
         calendar_data.append({
@@ -233,6 +248,7 @@ def calendar_page(year):
         can_edit=True,
         event_types=EventType.choices(sort=True),
         teachers=TEACHERS_CHOICES,
+        form=form
     )
 
 

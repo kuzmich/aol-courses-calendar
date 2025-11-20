@@ -1,49 +1,36 @@
   <dialog class="event-details add-event">
-    <form method="post" action="http://127.0.0.1:5000/events/">
+    <form method="post" action="{{ url_for('events') }}">
       <div class="form-group">
-	<label for="event-type">Мероприятие</label>
-	<select id="event-type" name="type" required>
-	  <option value="">Не выбрано</option>
-	  {% for type, name in event_types %}
-	  <option value="{{ type }}">{{ name }}</option>
-	  {% endfor %}
-	</select>
+	{{ form.event_type.label }}
+	{{ form.event_type() }}
       </div>
       <div class="form-group">
-	<label for="start-date">Дата начала</label>
-	<input type="date" name="start-date" id="start-date">
+	{{ form.start_date.label }}
+	{{ form.start_date() }}
       </div>
       <div class="form-group">
-	<label for="end-date">Дата окончания</label>
-	<input type="date" name="end-date" id="end-date">
+	{{ form.end_date.label }}
+	{{ form.end_date() }}
       </div>
       <div class="form-group">
-	<label>Расписание</label>
+	{{ form.schedule.label }}
 	<div class="flex-line">
-	  <label><input type="checkbox" name="schedule" value="1"> пн</label>
-	  <label><input type="checkbox" name="schedule" value="2"> вт</label>
-	  <label><input type="checkbox" name="schedule" value="3"> ср</label>
-	  <label><input type="checkbox" name="schedule" value="4"> чт</label>
-	  <label><input type="checkbox" name="schedule" value="5"> пт</label>
-	  <label><input type="checkbox" name="schedule" value="6"> сб</label>
-	  <label><input type="checkbox" name="schedule" value="7"> вс</label>
-  	</div>
+	{% for checkbox in form.schedule %}
+	<label>{{ checkbox() }} {{ checkbox.label.text }}</label>
+	{% endfor %}
+	</div>
       </div>
       <div class="form-group">
-	<label for="start-time">Время начала</label>
-	<input type="time" name="start-time" id="start-time">
+	{{ form.start_time.label }}
+	{{ form.start_time() }}
       </div>
       <div class="form-group">
-	<label for="place">Место</label>
-	<input id="place" type="text" name="place" required>
+	{{ form.place.label }}
+	{{ form.place() }}
       </div>
       <div class="form-group">
-	<label for="teachers">Учителя</label>
-	<select id="teachers" name="teachers" multiple>
-	  {% for teacher in teachers %}
-	  <option>{{ teacher }}</option>
-	  {% endfor %}
-	</select>
+	{{ form.teachers.label }}
+	{{ form.teachers() }}
       </div>
       <div class="form-group">
 	<button type="submit">Добавить</button>
