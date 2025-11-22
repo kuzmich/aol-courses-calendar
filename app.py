@@ -238,8 +238,7 @@ def teacher_names(teachers):
     names = []
     for t in teachers:
         last_name, first_name = t.split()
-        # names.append(f'{last_name} {first_name[0]}.')
-        names.append(f'{last_name}')
+        names.append(f'{last_name} {first_name[0]}.')
     return ' + '.join(names)
 
 
@@ -275,6 +274,8 @@ def calendar_page(year):
 
 @app.route("/events/", methods=["POST"])
 def events():
+    """Добавление события"""
+
     form = EventForm(request.form)
     print(form.data)
 
@@ -303,6 +304,8 @@ def events():
 
 @app.route("/events/<event_id>", methods=["POST"])
 def edit_event(event_id):
+    """Редактирования события"""
+
     event = get_event_by_id(event_id)
     form = EventForm(request.form, data=event)
     start_date = event['start_date']

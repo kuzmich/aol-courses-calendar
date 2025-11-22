@@ -7,6 +7,7 @@ from aa.proxy.admin import log_in, find_courses
 import dotenv
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from app import get_events, teacher_names
 from cal_utils import prepare_events, get_month_dates
 from parsing_utils import get_course_type, parse_dates
 
@@ -19,6 +20,7 @@ def render_calendar(context, template_file):
         loader=FileSystemLoader("templates"),
         autoescape=select_autoescape()
     )
+    env.filters['teacher_names'] = teacher_names
     template = env.get_template(template_file)
     return template.render(context)
 
@@ -140,6 +142,7 @@ def read_config():
 
 if __name__ == "__main__":
     logging.basicConfig(level='DEBUG')
+    logging.getLogger('pymongo').setLevel('INFO')
 
     template_file = 'page.html'
     output_dir = 'out/'
@@ -163,7 +166,8 @@ if __name__ == "__main__":
         for month in range(1, 12+1):
             calendar_data.append({
                 'dates': get_month_dates(year, month),
-                'events': adm.get(year, month),
+                # 'events': adm.get(year, month),
+                'events': prepare_events(get_events(year, month)),
                 'month': month,
                 'month_name': month_names[month - 1].title(),
                 'year': year

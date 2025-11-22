@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Календарь курсов и мероприятий «Искусства Жизни» в Иркутске на {{ current_year }} год</title>
-    {% if can_edit %}
+    {%- if can_edit %}
     <link rel="stylesheet" href="{{ url_for('static', filename='calendar.css') }}">
     <script src="{{ url_for('static', filename='admin.js') }}" defer></script>
-    {% else %}
+    {%- else %}
     <link rel="stylesheet" href="calendar.css?ver=2025-11-15T10:35:00+08:00">
     <script src="calendar.js?ver=2025-11-15T10:35:00+08:00" defer></script>
-    {% endif %}
+    {%- endif %}
 </head>
 <body>
   <h1>Курсы и мероприятия «Искусства Жизни» в Иркутске на {{ current_year }} год</h1>
@@ -27,13 +27,13 @@
   {% if can_edit%}
   <button type="button" class="add-event-btn">+</button>
   {% endif %}
-  {% if can_edit %}
+  {%- if can_edit %}
   <dialog class="event-details add-event">
     {% include "event-form.html" %}
   </dialog>
   <dialog class="event-details edit-event"></dialog>
-  {% else %}
+  {%- else %}
     {% include "info-box.html" %}
-  {% endif %}
+  {%- endif %}
 </body>
 </html>

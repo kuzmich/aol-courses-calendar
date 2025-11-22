@@ -8,41 +8,6 @@
     <script src="calendar.js?ver=2025-11-15T10:35:00+08:00" defer></script>
 </head>
 <body>
-    <dialog class="event-details">
-    <header>
-      <h3>О событии</h3>
-      <button class="close">X</button>
-    </header>
-    <table>
-      <tbody>
-	<tr>
-	  <th scope="row">Мероприятие</th>
-	  <td data-name="name"></td>
-	</tr>
-	<tr>
-	  <th scope="row">Даты</th>
-	  <td data-name="dates"></td>
-	</tr>
-	<tr>
-	  <th scope="row">Время</th>
-	  <td data-name="time"></td>
-	</tr>
-	<tr>
-	  <th scope="row">Место</th>
-	  <td data-name="place"></td>
-	</tr>
-	<tr>
-	  <th scope="row">Учителя</th>
-	  <td data-name="teachers"></td>
-	</tr>
-	<tr>
-	  <th scope="row">Участников</th>
-	  <td data-name="people"></td>
-	</tr>
-      </tbody>
-    </table>
-  </dialog>
-  
   <h1>Курсы и мероприятия «Искусства Жизни» в Иркутске на 2026 год</h1>
   <nav>
     <ul>
@@ -96,18 +61,20 @@
     <div class="day week5 weekday7 off-month">1</div>
     <button class="event line-clamp intuition event-num-1"
 	    style="grid-row: 2; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c099848cb"
 	    data-name="Процесс интуиции 8-18 лет"
-	    data-dates="2–18 Января"
+	    data-dates="2–18 января"
 	    data-place="Театральная, 17"
-	    data-teachers="Оксана Павлова"
+	    data-teachers="Павлова Оксана"
 	    data-people="1"
 	    >
-      Процесс интуиции 8-18 лет (Павлова)
+      Процесс интуиции 8-18 лет (Павлова О.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c099848cf"
 	    data-name="Поддерживающее занятие"
-	    data-dates="4 Января" data-time="09:00"
+	    data-dates="4 января" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -116,48 +83,64 @@
     </button>
     <button class="event line-clamp intuition event-num-1"
 	    style="grid-row: 3; grid-column: 1 / 8"
+	    data-id="691ea46e5339ec9c099848cb"
 	    data-name="Процесс интуиции 8-18 лет"
-	    data-dates="2–18 Января"
+	    data-dates="2–18 января"
 	    data-place="Театральная, 17"
-	    data-teachers="Оксана Павлова"
+	    data-teachers="Павлова Оксана"
 	    data-people="1"
 	    >
-      Процесс интуиции 8-18 лет (Павлова)
+      Процесс интуиции 8-18 лет (Павлова О.)
     </button>
     <button class="event line-clamp happiness event-num-2"
 	    style="grid-row: 3; grid-column: 1 / 4"
-	    data-name="Счастье (благотворительный)"
+	    data-id="691ea46e5339ec9c099848cc"
+	    data-name="Счастье"
 	    data-dates="5-7 января"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
-      Счастье (благотворительный)
+      Счастье
     </button>
     <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848d3"
 	    data-name="Поддерживающее занятие"
-	    data-dates="7 Января" data-time="19:00"
+	    data-dates="7 января" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
-	    style="grid-row: 3; grid-column: 6 / 7"
-	    data-name="Йога для позвоночника"
-	    data-dates="10 Января" data-time="09:00"
-	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+    <button class="event line-clamp premium event-num-2"
+	    style="grid-row: 3; grid-column: 4 / 7"
+	    data-id="691eaeddae7a49c9095f496f"
+	    data-name="Искусство жизни — Премиум"
+	    data-dates="8-10 января"
+	    data-place="Ларус, Листвянка"
+	    data-teachers="Копанев Вадим"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Искусство жизни — Премиум (Копанев В.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848d7"
+	    data-name="Йога для позвоночника"
+	    data-dates="10 января" data-time="09:00"
+	    data-place="Театральная, 17"
+	    data-teachers="Крылова Зинаида"
+	    data-people=""
+	    >
+      Йога для позвоночника (Крылова З.)
+    </button>
+    <button class="event line-clamp practices event-num-4"
+	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848db"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="10 Января" data-time="09:00"
+	    data-dates="10 января" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -166,8 +149,9 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c099848d0"
 	    data-name="Поддерживающее занятие"
-	    data-dates="11 Января" data-time="09:00"
+	    data-dates="11 января" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -176,38 +160,42 @@
     </button>
     <button class="event line-clamp intuition event-num-1"
 	    style="grid-row: 4; grid-column: 1 / 8"
+	    data-id="691ea46e5339ec9c099848cb"
 	    data-name="Процесс интуиции 8-18 лет"
-	    data-dates="2–18 Января"
+	    data-dates="2–18 января"
 	    data-place="Театральная, 17"
-	    data-teachers="Оксана Павлова"
+	    data-teachers="Павлова Оксана"
 	    data-people="1"
 	    >
-      Процесс интуиции 8-18 лет (Павлова)
+      Процесс интуиции 8-18 лет (Павлова О.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c099848df"
 	    data-name="Йога"
-	    data-dates="12 Января" data-time="10:00"
+	    data-dates="12 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848e8"
 	    data-name="Суставная йога"
-	    data-dates="13 Января" data-time="18:00"
+	    data-dates="13 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848ee"
 	    data-name="Йога"
-	    data-dates="13 Января" data-time="19:40"
+	    data-dates="13 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -216,68 +204,75 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848d4"
 	    data-name="Поддерживающее занятие"
-	    data-dates="14 Января" data-time="19:00"
+	    data-dates="14 января" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848e0"
 	    data-name="Йога"
-	    data-dates="14 Января" data-time="10:00"
+	    data-dates="14 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848e9"
 	    data-name="Суставная йога"
-	    data-dates="15 Января" data-time="18:00"
+	    data-dates="15 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848ef"
 	    data-name="Йога"
-	    data-dates="15 Января" data-time="19:40"
+	    data-dates="15 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c099848e1"
 	    data-name="Йога"
-	    data-dates="16 Января" data-time="10:00"
+	    data-dates="16 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848d8"
 	    data-name="Йога для позвоночника"
-	    data-dates="17 Января" data-time="09:00"
+	    data-dates="17 января" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848dc"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="17 Января" data-time="09:00"
+	    data-dates="17 января" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -286,38 +281,42 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c099848d1"
 	    data-name="Поддерживающее занятие"
-	    data-dates="18 Января" data-time="09:00"
+	    data-dates="18 января" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c099848e2"
 	    data-name="Йога"
-	    data-dates="19 Января" data-time="10:00"
+	    data-dates="19 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848ea"
 	    data-name="Суставная йога"
-	    data-dates="20 Января" data-time="18:00"
+	    data-dates="20 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848f0"
 	    data-name="Йога"
-	    data-dates="20 Января" data-time="19:40"
+	    data-dates="20 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -326,78 +325,86 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848d5"
 	    data-name="Поддерживающее занятие"
-	    data-dates="21 Января" data-time="19:00"
+	    data-dates="21 января" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848e3"
 	    data-name="Йога"
-	    data-dates="21 Января" data-time="10:00"
+	    data-dates="21 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848eb"
 	    data-name="Суставная йога"
-	    data-dates="22 Января" data-time="18:00"
+	    data-dates="22 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848f1"
 	    data-name="Йога"
-	    data-dates="22 Января" data-time="19:40"
+	    data-dates="22 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c099848e4"
 	    data-name="Йога"
-	    data-dates="23 Января" data-time="10:00"
+	    data-dates="23 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp satsang event-num-1"
 	    style="grid-row: 5; grid-column: 6 / 7"
-	    data-name="🎸 Песенный сатсанг"
+	    data-id="691ea46e5339ec9c099848cd"
+	    data-name="Песенный сатсанг"
 	    data-dates="24 января" data-time="16:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
-      🎸 Песенный сатсанг
+      Песенный сатсанг
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848d9"
 	    data-name="Йога для позвоночника"
-	    data-dates="24 Января" data-time="09:00"
+	    data-dates="24 января" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848dd"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="24 Января" data-time="09:00"
+	    data-dates="24 января" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -406,26 +413,29 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c099848d2"
 	    data-name="Поддерживающее занятие"
-	    data-dates="25 Января" data-time="09:00"
+	    data-dates="25 января" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c099848e5"
 	    data-name="Йога"
-	    data-dates="26 Января" data-time="10:00"
+	    data-dates="26 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp first_step event-num-2"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c099848f4"
 	    data-name="Первый шаг"
 	    data-dates="26 января" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -434,20 +444,22 @@
 	    >
       Первый шаг
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848ec"
 	    data-name="Суставная йога"
-	    data-dates="27 Января" data-time="18:00"
+	    data-dates="27 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c099848f2"
 	    data-name="Йога"
-	    data-dates="27 Января" data-time="19:40"
+	    data-dates="27 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -456,38 +468,42 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848d6"
 	    data-name="Поддерживающее занятие"
-	    data-dates="28 Января" data-time="19:00"
+	    data-dates="28 января" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c099848e6"
 	    data-name="Йога"
-	    data-dates="28 Января" data-time="10:00"
+	    data-dates="28 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848ed"
 	    data-name="Суставная йога"
-	    data-dates="29 Января" data-time="18:00"
+	    data-dates="29 января" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c099848f3"
 	    data-name="Йога"
-	    data-dates="29 Января" data-time="19:40"
+	    data-dates="29 января" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -496,38 +512,42 @@
     </button>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c099848ce"
 	    data-name="Счастье"
 	    data-dates="30 января-1 февраля"
 	    data-place="Театральная, 17"
-	    data-teachers=""
+	    data-teachers="Глебова Лариса"
 	    data-people=""
 	    >
-      Счастье
+      Счастье (Глебова Л.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c099848e7"
 	    data-name="Йога"
-	    data-dates="30 Января" data-time="10:00"
+	    data-dates="30 января" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848da"
 	    data-name="Йога для позвоночника"
-	    data-dates="31 Января" data-time="09:00"
+	    data-dates="31 января" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848de"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="31 Января" data-time="09:00"
+	    data-dates="31 января" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -581,38 +601,42 @@
     <div class="day week5 weekday7 off-month">1</div>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984905"
 	    data-name="Поддерживающее занятие"
-	    data-dates="1 Февраля" data-time="09:00"
+	    data-dates="1 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984909"
 	    data-name="Йога"
-	    data-dates="2 Февраля" data-time="10:00"
+	    data-dates="2 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984915"
 	    data-name="Суставная йога"
-	    data-dates="3 Февраля" data-time="18:00"
+	    data-dates="3 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998491d"
 	    data-name="Йога"
-	    data-dates="3 Февраля" data-time="19:40"
+	    data-dates="3 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -621,38 +645,42 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984901"
 	    data-name="Поддерживающее занятие"
-	    data-dates="4 Февраля" data-time="19:00"
+	    data-dates="4 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998490a"
 	    data-name="Йога"
-	    data-dates="4 Февраля" data-time="10:00"
+	    data-dates="4 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984916"
 	    data-name="Суставная йога"
-	    data-dates="5 Февраля" data-time="18:00"
+	    data-dates="5 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998491e"
 	    data-name="Йога"
-	    data-dates="5 Февраля" data-time="19:40"
+	    data-dates="5 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -661,38 +689,42 @@
     </button>
     <button class="event line-clamp art_of_silence event-num-1"
 	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c099848f6"
 	    data-name="Искусство тишины"
 	    data-dates="6-8 февраля"
 	    data-place="Театральная, 17"
-	    data-teachers="Ольга Шумакова"
+	    data-teachers="Шумакова Ольга"
 	    data-people=""
 	    >
-      Искусство тишины (Шумакова)
+      Искусство тишины (Шумакова О.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c0998490b"
 	    data-name="Йога"
-	    data-dates="6 Февраля" data-time="10:00"
+	    data-dates="6 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848f9"
 	    data-name="Йога для позвоночника"
-	    data-dates="7 Февраля" data-time="09:00"
+	    data-dates="7 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848fd"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="7 Февраля" data-time="09:00"
+	    data-dates="7 февраля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -701,26 +733,29 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984906"
 	    data-name="Поддерживающее занятие"
-	    data-dates="8 Февраля" data-time="09:00"
+	    data-dates="8 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998490c"
 	    data-name="Йога"
-	    data-dates="9 Февраля" data-time="10:00"
+	    data-dates="9 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp first_step event-num-2"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984925"
 	    data-name="Первый шаг"
 	    data-dates="9 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -729,20 +764,22 @@
 	    >
       Первый шаг
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984917"
 	    data-name="Суставная йога"
-	    data-dates="10 Февраля" data-time="18:00"
+	    data-dates="10 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998491f"
 	    data-name="Йога"
-	    data-dates="10 Февраля" data-time="19:40"
+	    data-dates="10 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -751,68 +788,75 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984902"
 	    data-name="Поддерживающее занятие"
-	    data-dates="11 Февраля" data-time="19:00"
+	    data-dates="11 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998490d"
 	    data-name="Йога"
-	    data-dates="11 Февраля" data-time="10:00"
+	    data-dates="11 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984918"
 	    data-name="Суставная йога"
-	    data-dates="12 Февраля" data-time="18:00"
+	    data-dates="12 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984920"
 	    data-name="Йога"
-	    data-dates="12 Февраля" data-time="19:40"
+	    data-dates="12 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c0998490e"
 	    data-name="Йога"
-	    data-dates="13 Февраля" data-time="10:00"
+	    data-dates="13 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848fa"
 	    data-name="Йога для позвоночника"
-	    data-dates="14 Февраля" data-time="09:00"
+	    data-dates="14 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848fe"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="14 Февраля" data-time="09:00"
+	    data-dates="14 февраля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -821,38 +865,42 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984907"
 	    data-name="Поддерживающее занятие"
-	    data-dates="15 Февраля" data-time="09:00"
+	    data-dates="15 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998490f"
 	    data-name="Йога"
-	    data-dates="16 Февраля" data-time="10:00"
+	    data-dates="16 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984919"
 	    data-name="Суставная йога"
-	    data-dates="17 Февраля" data-time="18:00"
+	    data-dates="17 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984921"
 	    data-name="Йога"
-	    data-dates="17 Февраля" data-time="19:40"
+	    data-dates="17 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -861,78 +909,86 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984903"
 	    data-name="Поддерживающее занятие"
-	    data-dates="18 Февраля" data-time="19:00"
+	    data-dates="18 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984910"
 	    data-name="Йога"
-	    data-dates="18 Февраля" data-time="10:00"
+	    data-dates="18 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998491a"
 	    data-name="Суставная йога"
-	    data-dates="19 Февраля" data-time="18:00"
+	    data-dates="19 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984922"
 	    data-name="Йога"
-	    data-dates="19 Февраля" data-time="19:40"
+	    data-dates="19 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c09984911"
 	    data-name="Йога"
-	    data-dates="20 Февраля" data-time="10:00"
+	    data-dates="20 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp satsang event-num-1"
 	    style="grid-row: 5; grid-column: 6 / 7"
-	    data-name="🎸 Песенный сатсанг"
+	    data-id="691ea46e5339ec9c099848f7"
+	    data-name="Песенный сатсанг"
 	    data-dates="21 февраля" data-time="16:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
-      🎸 Песенный сатсанг
+      Песенный сатсанг
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848fb"
 	    data-name="Йога для позвоночника"
-	    data-dates="21 Февраля" data-time="09:00"
+	    data-dates="21 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848ff"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="21 Февраля" data-time="09:00"
+	    data-dates="21 февраля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -941,26 +997,29 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984908"
 	    data-name="Поддерживающее занятие"
-	    data-dates="22 Февраля" data-time="09:00"
+	    data-dates="22 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984912"
 	    data-name="Йога"
-	    data-dates="23 Февраля" data-time="10:00"
+	    data-dates="23 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp first_step event-num-2"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984926"
 	    data-name="Первый шаг"
 	    data-dates="23 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -969,20 +1028,22 @@
 	    >
       Первый шаг
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998491b"
 	    data-name="Суставная йога"
-	    data-dates="24 Февраля" data-time="18:00"
+	    data-dates="24 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984923"
 	    data-name="Йога"
-	    data-dates="24 Февраля" data-time="19:40"
+	    data-dates="24 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -991,48 +1052,53 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984904"
 	    data-name="Поддерживающее занятие"
-	    data-dates="25 Февраля" data-time="19:00"
+	    data-dates="25 февраля" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984913"
 	    data-name="Йога"
-	    data-dates="25 Февраля" data-time="10:00"
+	    data-dates="25 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp art_of_silence event-num-1"
 	    style="grid-row: 6; grid-column: 4 / 8"
+	    data-id="691ea46e5339ec9c099848f5"
 	    data-name="Искусство тишины online"
-	    data-dates="26 Февраля–1 Марта"
+	    data-dates="26 февраля–1 марта"
 	    data-place="Онлайн, время МСК+5"
-	    data-teachers="Ольга Шумакова, Елена Сенченко"
+	    data-teachers="Шумакова Ольга, Сенченко Елена"
 	    data-people=""
 	    >
-      Искусство тишины online (Шумакова + Сенченко)
+      Искусство тишины online (Шумакова О. + Сенченко Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998491c"
 	    data-name="Суставная йога"
-	    data-dates="26 Февраля" data-time="18:00"
+	    data-dates="26 февраля" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984924"
 	    data-name="Йога"
-	    data-dates="26 Февраля" data-time="19:40"
+	    data-dates="26 февраля" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -1041,6 +1107,7 @@
     </button>
     <button class="event line-clamp happiness event-num-2"
 	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c099848f8"
 	    data-name="Счастье"
 	    data-dates="27 февраля-1 марта"
 	    data-place="Театральная, 17"
@@ -1049,30 +1116,33 @@
 	    >
       Счастье
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 6; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c09984914"
 	    data-name="Йога"
-	    data-dates="27 Февраля" data-time="10:00"
+	    data-dates="27 февраля" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c099848fc"
 	    data-name="Йога для позвоночника"
-	    data-dates="28 Февраля" data-time="09:00"
+	    data-dates="28 февраля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-4"
+    <button class="event line-clamp practices event-num-4"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984900"
 	    data-name="Поддерживающее занятие для VTP"
-	    data-dates="28 Февраля" data-time="09:00"
+	    data-dates="28 февраля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
 	    data-teachers=""
 	    data-people=""
@@ -1133,118 +1203,130 @@
     <div class="day week6 weekday7 off-month">5</div>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984951"
 	    data-name="Поддерживающее занятие"
-	    data-dates="1 Марта" data-time="09:00"
+	    data-dates="1 марта" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998492a"
 	    data-name="Йога"
-	    data-dates="2 Марта" data-time="10:00"
+	    data-dates="2 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984937"
 	    data-name="Суставная йога"
-	    data-dates="3 Марта" data-time="18:00"
+	    data-dates="3 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984940"
 	    data-name="Йога"
-	    data-dates="3 Марта" data-time="19:40"
+	    data-dates="3 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998492b"
 	    data-name="Йога"
-	    data-dates="4 Марта" data-time="10:00"
+	    data-dates="4 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998494d"
 	    data-name="Поддерживающее занятие"
-	    data-dates="4 Марта" data-time="19:00"
+	    data-dates="4 марта" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984938"
 	    data-name="Суставная йога"
-	    data-dates="5 Марта" data-time="18:00"
+	    data-dates="5 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984941"
 	    data-name="Йога"
-	    data-dates="5 Марта" data-time="19:40"
+	    data-dates="5 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c0998492c"
 	    data-name="Йога"
-	    data-dates="6 Марта" data-time="10:00"
+	    data-dates="6 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp deep_sleep event-num-1"
 	    style="grid-row: 3; grid-column: 6 / 8"
+	    data-id="691ea46e5339ec9c09984927"
 	    data-name="Глубокий сон и снятие тревожности"
 	    data-dates="7-9 марта"
 	    data-place="Театральная, 17"
-	    data-teachers="Ольга Усова"
+	    data-teachers="Усова Ольга"
 	    data-people=""
 	    >
-      Глубокий сон и снятие тревожности (Усова)
+      Глубокий сон и снятие тревожности (Усова О.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984949"
 	    data-name="Йога для позвоночника"
-	    data-dates="7 Марта" data-time="09:00"
+	    data-dates="7 марта" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984952"
 	    data-name="Поддерживающее занятие"
-	    data-dates="8 Марта" data-time="09:00"
+	    data-dates="8 марта" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -1253,26 +1335,29 @@
     </button>
     <button class="event line-clamp deep_sleep event-num-1"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984927"
 	    data-name="Глубокий сон и снятие тревожности"
 	    data-dates="7-9 марта"
 	    data-place="Театральная, 17"
-	    data-teachers="Ольга Усова"
+	    data-teachers="Усова Ольга"
 	    data-people=""
 	    >
-      Глубокий сон и снятие тревожности (Усова)
+      Глубокий сон и снятие тревожности (Усова О.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998492d"
 	    data-name="Йога"
-	    data-dates="9 Марта" data-time="10:00"
+	    data-dates="9 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp first_step event-num-3"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984956"
 	    data-name="Первый шаг"
 	    data-dates="9 марта" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1281,218 +1366,240 @@
 	    >
       Первый шаг
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984939"
 	    data-name="Суставная йога"
-	    data-dates="10 Марта" data-time="18:00"
+	    data-dates="10 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984942"
 	    data-name="Йога"
-	    data-dates="10 Марта" data-time="19:40"
+	    data-dates="10 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998492e"
 	    data-name="Йога"
-	    data-dates="11 Марта" data-time="10:00"
+	    data-dates="11 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998494e"
 	    data-name="Поддерживающее занятие"
-	    data-dates="11 Марта" data-time="19:00"
+	    data-dates="11 марта" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998493a"
 	    data-name="Суставная йога"
-	    data-dates="12 Марта" data-time="18:00"
+	    data-dates="12 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 4; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984943"
 	    data-name="Йога"
-	    data-dates="12 Марта" data-time="19:40"
+	    data-dates="12 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c0998492f"
 	    data-name="Йога"
-	    data-dates="13 Марта" data-time="10:00"
+	    data-dates="13 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998494a"
 	    data-name="Йога для позвоночника"
-	    data-dates="14 Марта" data-time="09:00"
+	    data-dates="14 марта" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984953"
 	    data-name="Поддерживающее занятие"
-	    data-dates="15 Марта" data-time="09:00"
+	    data-dates="15 марта" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984930"
 	    data-name="Йога"
-	    data-dates="16 Марта" data-time="10:00"
+	    data-dates="16 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998493b"
 	    data-name="Суставная йога"
-	    data-dates="17 Марта" data-time="18:00"
+	    data-dates="17 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984944"
 	    data-name="Йога"
-	    data-dates="17 Марта" data-time="19:40"
+	    data-dates="17 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984931"
 	    data-name="Йога"
-	    data-dates="18 Марта" data-time="10:00"
+	    data-dates="18 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998494f"
 	    data-name="Поддерживающее занятие"
-	    data-dates="18 Марта" data-time="19:00"
+	    data-dates="18 марта" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998493c"
 	    data-name="Суставная йога"
-	    data-dates="19 Марта" data-time="18:00"
+	    data-dates="19 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984945"
 	    data-name="Йога"
-	    data-dates="19 Марта" data-time="19:40"
+	    data-dates="19 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c09984932"
 	    data-name="Йога"
-	    data-dates="20 Марта" data-time="10:00"
+	    data-dates="20 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp satsang event-num-1"
 	    style="grid-row: 5; grid-column: 6 / 7"
-	    data-name="🎸 Песенный сатсанг"
+	    data-id="691ea46e5339ec9c09984928"
+	    data-name="Песенный сатсанг"
 	    data-dates="21 марта" data-time="16:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
-      🎸 Песенный сатсанг
+      Песенный сатсанг
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998494b"
 	    data-name="Йога для позвоночника"
-	    data-dates="21 Марта" data-time="09:00"
+	    data-dates="21 марта" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984954"
 	    data-name="Поддерживающее занятие"
-	    data-dates="22 Марта" data-time="09:00"
+	    data-dates="22 марта" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984933"
 	    data-name="Йога"
-	    data-dates="23 Марта" data-time="10:00"
+	    data-dates="23 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp first_step event-num-2"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984957"
 	    data-name="Первый шаг"
 	    data-dates="23 марта" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1501,60 +1608,66 @@
 	    >
       Первый шаг
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998493d"
 	    data-name="Суставная йога"
-	    data-dates="24 Марта" data-time="18:00"
+	    data-dates="24 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984946"
 	    data-name="Йога"
-	    data-dates="24 Марта" data-time="19:40"
+	    data-dates="24 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Йога
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984934"
 	    data-name="Йога"
-	    data-dates="25 Марта" data-time="10:00"
+	    data-dates="25 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984950"
 	    data-name="Поддерживающее занятие"
-	    data-dates="25 Марта" data-time="19:00"
+	    data-dates="25 марта" data-time="19:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c0998493e"
 	    data-name="Суставная йога"
-	    data-dates="26 Марта" data-time="18:00"
+	    data-dates="26 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 4 / 5"
+	    data-id="691ea46e5339ec9c09984947"
 	    data-name="Йога"
-	    data-dates="26 Марта" data-time="19:40"
+	    data-dates="26 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -1563,6 +1676,7 @@
     </button>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c09984929"
 	    data-name="Счастье"
 	    data-dates="27-29 марта"
 	    data-place="Театральная, 17"
@@ -1571,60 +1685,66 @@
 	    >
       Счастье
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 5 / 6"
+	    data-id="691ea46e5339ec9c09984935"
 	    data-name="Йога"
-	    data-dates="27 Марта" data-time="10:00"
+	    data-dates="27 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998494c"
 	    data-name="Йога для позвоночника"
-	    data-dates="28 Марта" data-time="09:00"
+	    data-dates="28 марта" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 6; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984955"
 	    data-name="Поддерживающее занятие"
-	    data-dates="29 Марта" data-time="09:00"
+	    data-dates="29 марта" data-time="09:00"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 7; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984936"
 	    data-name="Йога"
-	    data-dates="30 Марта" data-time="10:00"
+	    data-dates="30 марта" data-time="10:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Евгения Пашевина"
+	    data-teachers="Пашевина Евгения"
 	    data-people=""
 	    >
-      Йога (Пашевина)
+      Йога (Пашевина Е.)
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 7; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c0998493f"
 	    data-name="Суставная йога"
-	    data-dates="31 Марта" data-time="18:00"
+	    data-dates="31 марта" data-time="18:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Суставная йога (Крылова)
+      Суставная йога (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 7; grid-column: 2 / 3"
+	    data-id="691ea46e5339ec9c09984948"
 	    data-name="Йога"
-	    data-dates="31 Марта" data-time="19:40"
+	    data-dates="31 марта" data-time="19:40"
 	    data-place="Театральная, 17"
 	    data-teachers=""
 	    data-people=""
@@ -1678,6 +1798,7 @@
     <div class="day week5 weekday7 off-month">3</div>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998495a"
 	    data-name="Поддерживающее занятие"
 	    data-dates="1 апреля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1686,18 +1807,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984963"
 	    data-name="Йога для позвоночника"
 	    data-dates="4 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984967"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="4 апреля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -1708,6 +1831,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c0998495f"
 	    data-name="Поддерживающее занятие"
 	    data-dates="5 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -1716,8 +1840,9 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp first_step event-num-1"
 	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998496c"
 	    data-name="Первый шаг"
 	    data-dates="6 апреля"
 	    data-place="Театральная, 17"
@@ -1728,6 +1853,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998495b"
 	    data-name="Поддерживающее занятие"
 	    data-dates="8 апреля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1736,18 +1862,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984964"
 	    data-name="Йога для позвоночника"
 	    data-dates="11 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984968"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="11 апреля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -1758,6 +1886,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984960"
 	    data-name="Поддерживающее занятие"
 	    data-dates="12 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -1768,6 +1897,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998495c"
 	    data-name="Поддерживающее занятие"
 	    data-dates="15 апреля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1776,18 +1906,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984965"
 	    data-name="Йога для позвоночника"
 	    data-dates="18 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984969"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="18 апреля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -1796,18 +1928,20 @@
 	    >
       Поддерживающее занятие для VTP
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp satsang event-num-3"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998496b"
 	    data-name="Песенный сатсанг"
 	    data-dates="18 апреля" data-time="16:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Алексей Кузьминич"
+	    data-teachers="Кузьминич Алексей"
 	    data-people=""
 	    >
-      Песенный сатсанг (Кузьминич)
+      Песенный сатсанг (Кузьминич А.)
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984961"
 	    data-name="Поддерживающее занятие"
 	    data-dates="19 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -1816,8 +1950,9 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp first_step event-num-1"
 	    style="grid-row: 5; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c0998496d"
 	    data-name="Первый шаг"
 	    data-dates="20 апреля"
 	    data-place="Театральная, 17"
@@ -1828,6 +1963,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998495d"
 	    data-name="Поддерживающее занятие"
 	    data-dates="22 апреля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1838,6 +1974,7 @@
     </button>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 5; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c09984959"
 	    data-name="Счастье"
 	    data-dates="24-26 апреля"
 	    data-place="Театральная, 17"
@@ -1846,18 +1983,20 @@
 	    >
       Счастье
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984966"
 	    data-name="Йога для позвоночника"
 	    data-dates="25 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998496a"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="25 апреля" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -1868,6 +2007,7 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984962"
 	    data-name="Поддерживающее занятие"
 	    data-dates="26 апреля" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -1878,16 +2018,18 @@
     </button>
     <button class="event line-clamp art_of_silence event-num-1"
 	    style="grid-row: 6; grid-column: 3 / 8"
+	    data-id="691ea46e5339ec9c09984958"
 	    data-name="Искусство тишины"
-	    data-dates="29 Апреля–3 Мая"
+	    data-dates="29 апреля–3 мая"
 	    data-place="Место уточняется"
-	    data-teachers="Вадим Копанев"
+	    data-teachers="Копанев Вадим"
 	    data-people=""
 	    >
-      Искусство тишины (Копанев)
+      Искусство тишины (Копанев В.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998495e"
 	    data-name="Поддерживающее занятие"
 	    data-dates="29 апреля" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1941,18 +2083,20 @@
     <div class="day week5 weekday5">29</div>
     <div class="day week5 weekday6">30</div>
     <div class="day week5 weekday7">31</div>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984978"
 	    data-name="Йога для позвоночника"
 	    data-dates="2 мая" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497d"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="2 мая" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -1963,6 +2107,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984973"
 	    data-name="Поддерживающее занятие"
 	    data-dates="3 мая" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -1973,6 +2118,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998496f"
 	    data-name="Поддерживающее занятие"
 	    data-dates="6 мая" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -1981,18 +2127,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984979"
 	    data-name="Йога для позвоночника"
 	    data-dates="9 мая" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497e"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="9 мая" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2003,6 +2151,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984974"
 	    data-name="Поддерживающее занятие"
 	    data-dates="10 мая" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2011,8 +2160,9 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp first_step event-num-1"
 	    style="grid-row: 4; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984986"
 	    data-name="Первый шаг"
 	    data-dates="11 мая" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2023,6 +2173,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984970"
 	    data-name="Поддерживающее занятие"
 	    data-dates="13 мая" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2031,18 +2182,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497a"
 	    data-name="Йога для позвоночника"
 	    data-dates="16 мая" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497f"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="16 мая" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2053,6 +2206,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984975"
 	    data-name="Поддерживающее занятие"
 	    data-dates="17 мая" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2063,6 +2217,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984971"
 	    data-name="Поддерживающее занятие"
 	    data-dates="20 мая" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2071,18 +2226,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp dsn event-num-1"
 	    style="grid-row: 5; grid-column: 4 / 8"
+	    data-id="691ea46e5339ec9c09984982"
 	    data-name="DSN"
 	    data-dates="21-24 мая"
 	    data-place="Театральная, 17"
-	    data-teachers="Мира Яскевич"
+	    data-teachers="Яскевич Мира"
 	    data-people=""
 	    >
-      DSN (Яскевич)
+      DSN (Яскевич М.)
     </button>
     <button class="event line-clamp happiness event-num-2"
 	    style="grid-row: 5; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c0998496e"
 	    data-name="Счастье"
 	    data-dates="22-24 мая"
 	    data-place="Театральная, 17"
@@ -2091,18 +2248,20 @@
 	    >
       Счастье
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp yoga event-num-3"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497b"
 	    data-name="Йога для позвоночника"
 	    data-dates="23 мая" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-4"
+    <button class="event line-clamp practices event-num-4"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984980"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="23 мая" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2113,6 +2272,7 @@
     </button>
     <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984976"
 	    data-name="Поддерживающее занятие"
 	    data-dates="24 мая" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2121,8 +2281,9 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp satsang event-num-1"
 	    style="grid-row: 6; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984983"
 	    data-name="Песенный сатсанг"
 	    data-dates="25 мая"
 	    data-place="Театральная, 17"
@@ -2133,16 +2294,18 @@
     </button>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 6; grid-column: 2 / 5"
+	    data-id="691ea46e5339ec9c09984984"
 	    data-name="Счастье"
 	    data-dates="26-28 мая"
 	    data-place="Театральная, 17"
-	    data-teachers="Мира Яскевич"
+	    data-teachers="Яскевич Мира"
 	    data-people=""
 	    >
-      Счастье (Яскевич)
+      Счастье (Яскевич М.)
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 6; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984972"
 	    data-name="Поддерживающее занятие"
 	    data-dates="27 мая" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2153,26 +2316,29 @@
     </button>
     <button class="event line-clamp cooking event-num-1"
 	    style="grid-row: 6; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c09984985"
 	    data-name="Здоровое питание"
 	    data-dates="29-31 мая"
 	    data-place="Театральная, 17"
-	    data-teachers="Мира Яскевич"
+	    data-teachers="Яскевич Мира"
 	    data-people=""
 	    >
-      Здоровое питание (Яскевич)
+      Здоровое питание (Яскевич М.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c0998497c"
 	    data-name="Йога для позвоночника"
 	    data-dates="30 мая" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 6; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984981"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="30 мая" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2183,6 +2349,7 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 6; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c09984977"
 	    data-name="Поддерживающее занятие"
 	    data-dates="31 мая" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2238,6 +2405,7 @@
     <div class="day week5 weekday7 off-month">5</div>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984988"
 	    data-name="Поддерживающее занятие"
 	    data-dates="3 июня" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2246,18 +2414,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984990"
 	    data-name="Йога для позвоночника"
 	    data-dates="6 июня" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 2; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984994"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="6 июня" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2268,6 +2438,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 2; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c0998498c"
 	    data-name="Поддерживающее занятие"
 	    data-dates="7 июня" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2276,8 +2447,9 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp first_step event-num-1"
 	    style="grid-row: 3; grid-column: 1 / 2"
+	    data-id="691ea46e5339ec9c09984998"
 	    data-name="Первый шаг"
 	    data-dates="8 июня" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2288,6 +2460,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 3; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c09984989"
 	    data-name="Поддерживающее занятие"
 	    data-dates="10 июня" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2298,26 +2471,29 @@
     </button>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 3; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c09984987"
 	    data-name="Счастье"
 	    data-dates="12-14 июня"
 	    data-place="Театральная, 17"
-	    data-teachers="Ольга Демиденко"
+	    data-teachers="Демиденко Ольга"
 	    data-people=""
 	    >
-      Счастье (Демиденко)
+      Счастье (Демиденко О.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp yoga event-num-2"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984991"
 	    data-name="Йога для позвоночника"
 	    data-dates="13 июня" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-3"
+    <button class="event line-clamp practices event-num-3"
 	    style="grid-row: 3; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984995"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="13 июня" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2328,6 +2504,7 @@
     </button>
     <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 3; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c0998498d"
 	    data-name="Поддерживающее занятие"
 	    data-dates="14 июня" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2338,6 +2515,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998498a"
 	    data-name="Поддерживающее занятие"
 	    data-dates="17 июня" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2346,18 +2524,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984992"
 	    data-name="Йога для позвоночника"
 	    data-dates="20 июня" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 4; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984996"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="20 июня" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2368,6 +2548,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 4; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c0998498e"
 	    data-name="Поддерживающее занятие"
 	    data-dates="21 июня" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2378,6 +2559,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 3 / 4"
+	    data-id="691ea46e5339ec9c0998498b"
 	    data-name="Поддерживающее занятие"
 	    data-dates="24 июня" data-time="19:00"
 	    data-place="Театральная, 17"
@@ -2386,18 +2568,20 @@
 	    >
       Поддерживающее занятие
     </button>
-    <button class="event line-clamp unknown event-num-1"
+    <button class="event line-clamp yoga event-num-1"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984993"
 	    data-name="Йога для позвоночника"
 	    data-dates="27 июня" data-time="09:00"
 	    data-place="Театральная, 17"
-	    data-teachers="Зинаида Крылова"
+	    data-teachers="Крылова Зинаида"
 	    data-people=""
 	    >
-      Йога для позвоночника (Крылова)
+      Йога для позвоночника (Крылова З.)
     </button>
-    <button class="event line-clamp unknown event-num-2"
+    <button class="event line-clamp practices event-num-2"
 	    style="grid-row: 5; grid-column: 6 / 7"
+	    data-id="691ea46e5339ec9c09984997"
 	    data-name="Поддерживающее занятие для VTP"
 	    data-dates="27 июня" data-time="09:00"
 	    data-place="Театральная, 17 (малый зал)"
@@ -2408,6 +2592,7 @@
     </button>
     <button class="event line-clamp practices event-num-1"
 	    style="grid-row: 5; grid-column: 7 / 8"
+	    data-id="691ea46e5339ec9c0998498f"
 	    data-name="Поддерживающее занятие"
 	    data-dates="28 июня" data-time="09:00"
 	    data-place="Театральная, 17"
@@ -2463,6 +2648,7 @@
     <div class="day week5 weekday7 off-month">2</div>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c09984999"
 	    data-name="Счастье"
 	    data-dates="17-19 июля"
 	    data-place="Театральная, 17"
@@ -2525,6 +2711,7 @@
     <div class="day week6 weekday7 off-month">6</div>
     <button class="event line-clamp happiness event-num-1"
 	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c0998499b"
 	    data-name="Счастье"
 	    data-dates="14-16 августа"
 	    data-place="Театральная, 17"
@@ -2535,13 +2722,14 @@
     </button>
     <button class="event line-clamp art_of_silence event-num-1"
 	    style="grid-row: 5; grid-column: 1 / 8"
+	    data-id="691ea46e5339ec9c0998499a"
 	    data-name="Искусство тишины"
-	    data-dates="17–23 Августа"
+	    data-dates="17–23 августа"
 	    data-place="д. Куркут, база отдыха «Байкал-вега»"
-	    data-teachers="Ольга Шумакова"
+	    data-teachers="Шумакова Ольга"
 	    data-people=""
 	    >
-      Искусство тишины (Шумакова)
+      Искусство тишины (Шумакова О.)
     </button>
   </div>
       <h2 id="9">Сентябрь 2026</h2>
@@ -2687,23 +2875,25 @@
     <div class="day week6 weekday7 off-month">6</div>
     <button class="event line-clamp art_of_silence event-num-1"
 	    style="grid-row: 4; grid-column: 3 / 8"
+	    data-id="691ea46e5339ec9c0998499c"
 	    data-name="Искусство тишины"
-	    data-dates="11–15 Ноября"
+	    data-dates="11–15 ноября"
 	    data-place="Место уточняется"
-	    data-teachers="Ольга Шумакова"
+	    data-teachers="Шумакова Ольга"
 	    data-people=""
 	    >
-      Искусство тишины (Шумакова)
+      Искусство тишины (Шумакова О.)
     </button>
     <button class="event line-clamp happiness event-num-2"
 	    style="grid-row: 4; grid-column: 5 / 8"
+	    data-id="691ea46e5339ec9c0998499d"
 	    data-name="Счастье"
 	    data-dates="13-15 ноября"
 	    data-place="Театральная, 17"
-	    data-teachers="Ольга Демиденко"
+	    data-teachers="Демиденко Ольга"
 	    data-people=""
 	    >
-      Счастье (Демиденко)
+      Счастье (Демиденко О.)
     </button>
   </div>
       <h2 id="12">Декабрь 2026</h2>
@@ -2752,5 +2942,44 @@
     <div class="day week5 weekday7 off-month">3</div>
   </div>
   
+      <dialog class="event-details">
+    <header>
+      <h3>О событии</h3>
+      <button class="close">
+	<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+	  <line x1="1" y1="1" x2="9" y2="9" />
+	  <line x1="9" y1="1" x2="1" y2="9" />
+	</svg>
+      </button>
+    </header>
+    <table>
+      <tbody>
+	<tr>
+	  <th scope="row">Мероприятие</th>
+	  <td data-name="name"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Даты</th>
+	  <td data-name="dates"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Время</th>
+	  <td data-name="time"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Место</th>
+	  <td data-name="place"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Учителя</th>
+	  <td data-name="teachers"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Участников</th>
+	  <td data-name="people"></td>
+	</tr>
+      </tbody>
+    </table>
+  </dialog>
 </body>
 </html>
