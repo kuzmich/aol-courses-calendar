@@ -1,7 +1,7 @@
 import calendar
 from datetime import date, datetime, timedelta
 import enum
-from functools import cache
+from functools import cache, lru_cache
 import json
 from pathlib import Path
 
@@ -18,6 +18,12 @@ from cal_utils import prepare_events, get_month_dates, next_month_first_day, wee
 DATA_DIR = 'data'
 
 app = Flask(__name__)
+
+
+@cache
+def get_db(url='mongodb://127.0.0.1:27017/', dbname='aol_calendar'):
+    client = MongoClient(url)
+    return client[dbname]
 
 
 class EventType(enum.StrEnum):
@@ -86,6 +92,38 @@ TEACHERS_CHOICES = [
 ]
 
 
+@lru_cache(maxsize=1)
+def get_all_teachers():
+    db = get_db()
+    events_col = db['events']
+    list_of_list_of_teachers = (event.get('teachers', []) for event in events_col.find({}, {'teachers': 1}))
+    teachers = (teacher for list_of_teachers in list_of_list_of_teachers for teacher in list_of_teachers)
+    return sorted(set(teachers))
+
+
+LOCATION_CHOICES = [
+    'Большая Речка, "Пирамида"',
+    'Большие Коты',
+    'Листвянка, гостиница Larus (ул. Октябрьская, 8д)',
+    'Луговое (ул. Изумрудная, 8)',
+    'Место уточняется',
+    'Ольхон, ретритный центр «Чаша Чингисхана»',
+    'Онлайн, время МСК+5',
+    'Театральная, 17',
+    'Театральная, 17 (малый зал)',
+    'г. Шелехов, 4-й микрорайон, 30в',
+    'д. Куркут, база отдыха «Байкал-вега»',
+    'парк-отель «Звездный»',
+]
+
+
+@lru_cache(maxsize=1)
+def get_all_locations():
+    db = get_db()
+    events_col = db['events']
+    return sorted(set(event['place'] for event in events_col.find({}, {'place': 1})))
+
+
 class Month(enum.Enum):
     января = 1
     февраля = 2
@@ -133,8 +171,8 @@ class EventForm(Form):
     end_date = DateField('Дата окончания', [Optional()], name="end-date")
     schedule = MultiCheckboxField('Расписание', [Optional()], choices=WeekDay.choices(), coerce=int)
     start_time = TimeField('Время начала', [Optional()], name="start-time")
-    place = StringField('Место', [DataRequired()])
-    teachers = SelectMultipleField('Учителя', [Optional()], choices=TEACHERS_CHOICES)
+    place = SelectField('Место', [DataRequired()], choices=get_all_locations())
+    teachers = SelectMultipleField('Учителя', [Optional()], choices=get_all_teachers())
 
 
 def human_dates(start_date, end_date):
@@ -197,12 +235,6 @@ def add_events(events):
 
     for e in events:
         events_col.insert_one(e)
-
-
-@cache
-def get_db(url='mongodb://127.0.0.1:27017/', dbname='aol_calendar'):
-    client = MongoClient(url)
-    return client[dbname]
 
 
 def get_events(year, month):
@@ -328,4 +360,9 @@ def get_event_form(event_id):
     if event.get('time'):
         start_time = datetime.strptime(event['time'], "%H:%M")
     form = EventForm(data=event, event_type=event['type'], start_time=start_time)
-    return render_template("event-form.html", form=form, edit=True, url=url_for('edit_event', event_id=event_id))
+    return render_template(
+        "event-form.html",
+        form=form,
+        edit=True,
+        url=url_for('edit_event', event_id=event_id),
+    )
